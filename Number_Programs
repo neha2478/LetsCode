@@ -1,0 +1,64 @@
+/*
+Tasks List 
+1> Reverse a Number 
+2> Palindrome of a number
+3> Factorial of anumber
+*/
+
+Task 1> //Reverse a number
+class A{
+    public static void main(String[] args){
+      //Reverse a number..
+      int num = 123456;
+      int rev = 0;
+      
+      while(num != 0){
+          int rem = num % 10;
+          rev = rev * 10 + rem;
+          num = num / 10;
+      }
+      System.out.println(rev);
+    }
+}
+
+Task 2> //Palindrome of a number - Logic
+
+class A{
+    public static void main(String[] args){
+      //Palindrom of a number
+      int num = 123456;
+      int copy = num;
+      int rev = 0;
+      
+      while(num != 0){
+          int rem = num % 10;
+          rev = rev * 10 + rem;
+          num = num / 10;
+      }
+      System.out.println(rev);
+      System.out.println("------Palindrome of Number!!-------");
+      
+      if(copy == rev){
+          System.out.println(copy + " Is a Palindrome");
+      }
+      else{
+          System.out.println(copy + " Is not a Palindrome");
+      }
+    }
+}
+
+
+Task 3> //Factorial of anumber..
+class A{
+    public static void main(String[] args){
+      //Factorial of a number....
+      int no = 5;
+      int fact = 1;
+      for(int i = 1 ; i <= no ; i++){
+          fact = fact * i ;
+      }
+      System.out.println("factorial of " + no + " = " + fact);
+    }
+}
+
+Task 4>
