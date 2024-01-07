@@ -1,0 +1,36 @@
+Fizz Buzz Logics
+
+for(int i = 0 ; i <= 20 ; i++){
+  if(i % 3 == 0 && i % 7 == 0){
+      System.out.println("Fizz Buzz");
+  }
+  elseif(i % 3 == 0 ){
+      System.out.println("Fizz Fizz");
+  }
+  else if(i % 7 == 0){
+      System.out.println("Buzz Buzz");
+  }
+  else{
+       System.out.println("Invalid Number!!");
+  }
+}
+
+Another way to do it... is...
+
+class Sample{
+  public static void main(String[] args){
+    int no = 14;
+    if(no % 4 == 0 && no % 7 == 0){
+        System.out.println("Burr Durr");
+    }
+    else if(no % 4 == 0){
+        System.out.println("Durr Durr");
+    }
+    else if(no % 7 == 0){  
+        System.out.println("Burr Burr");
+    }
+    else{
+        System.out.println("Invalid Number!!");
+    }
+  }
+}
