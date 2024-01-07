@@ -1,0 +1,104 @@
+//Code related to String in Java....
+
+replace(), replaceAll(), charAt(), length() 
+length() - In strings the length is a method not a property....
+replace() - Only one character will change
+reolaceAll() - It will change all the characters....acc to need
+charAt() - It will take the character from the String...
+
+Task 1> to remove Spaces from the string.....
+Ans>
+class Sample{
+  public static void main(String[] args){
+    //To replace space.....
+    String str = "Hi My Name is Shruti!!";
+    String rep = str.replaceAll(" ", "");
+    System.out.println(rep);
+  }
+}
+
+Task 2> Remove the special Characters from the string.....
+//Reverse the String...
+
+//without using any method or any return type....
+class ReverseString{
+    public static void main(String[] args){
+        //Logic
+        String str = "Hi my name is Shruti";
+        String replace = "";
+        str = str.replaceAll(" ", "");
+        for(int i = str.length() - 1 ; i >= 0 ; i--){
+            replace = replace + str.charAt(i);
+        }
+        System.out.println(replace);
+    }
+}
+
+//In betwen methods...in a class
+
+class A{
+    static void reverseStr(String str1){
+        String replace = "";
+        str1 = str1.replaceAll(" ", "");
+        for(int i = str1.length() - 1 ; i >= 0 ; i--){
+            replace = replace + str1.charAt(i);
+        }
+        System.out.println(replace);
+    }
+    
+    //Main Method...
+    public static void main(String[] args){
+        //Logic
+        String str = "Hi my name is Shruti";
+        //Calling the method....
+        reverseStr(str);
+    }
+}
+
+//In betwen class
+class A{
+    static void reverseStr(String str1){
+        String replace = "";
+        str1 = str1.replaceAll(" ", "");
+        for(int i = str1.length() - 1 ; i >= 0 ; i--){
+            replace = replace + str1.charAt(i);
+        }
+        System.out.println(replace);
+    }
+}
+
+class B{ 
+    
+    //Main Method...
+    public static void main(String[] args){
+        //Logic
+        String str = "Hi my name is Shruti";
+        //Calling the method....
+        A.reverseStr(str); //classname.method_name() - way of calling the method in between the classes....
+    }
+}
+
+
+Task 3> Find wheather the string is Palindrome or not....
+
+class A{
+    public static void main(String[] args){
+        String str = "Hi my name is Shruti!!";
+        String rev = "";
+        str = str.replaceAll(" ", "");
+        for(int i = str.length() - 1; i >= 0 ; i--){
+            rev += str.charAt(i);
+        }
+        System.out.println(rev);
+        
+        System.out.println("-----------"); //For next Line....
+        
+        if(str.equals(rev)){
+            System.out.println("Yeah the String is palindrome!!");
+        }
+        else{
+            System.out.println("Yeah the String is not a palindrome!!");
+        }
+    }
+}
+
