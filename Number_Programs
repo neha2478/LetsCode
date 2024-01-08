@@ -3,6 +3,9 @@ Tasks List
 1> Reverse a Number 
 2> Palindrome of a number
 3> Factorial of anumber
+4> Sum of each digits in a Number
+5> Swaping two Numbers with 3rd variable
+6> Swaping two Numbers without 3rd variable
 */
 
 Task 1> //Reverse a number
@@ -61,4 +64,53 @@ class A{
     }
 }
 
-Task 4>
+Task 4> //Sum of each digit in a number....
+class A{
+    public static void main(String[] args){
+        int num = 1234567890;
+        System.out.println(sumOfNum(num));
+    }
+    
+    static int sumOfNum(int num1){
+        int sum = 0;
+        while(num1 != 0){
+            int rem = num1 % 10;
+            sum = sum + rem;
+            num1 = num1 / 10;
+        }
+        return sum;
+    }
+}
+
+Task 5> //Swaping two Numbers with 3rd variable
+class A{
+    public static void main(String[] args){
+       int a = 10;
+       int b = 12;
+       int temp = 0;
+       
+       temp = a;
+       a = b;
+       b = temp;
+       
+       System.out.println(a);
+       System.out.println(b);
+    }
+}
+
+Task 6> //Swaping two Numbers without 3rd variable
+class A{
+    public static void main(String[] args){
+       int a = 10;
+       int b = 12;
+       
+       a = a + b;
+       b = a - b;
+       a = a - b;
+       
+       System.out.println(a);
+       System.out.println(b);
+    }
+}
+
+Task 7> Find the factorial of each number....
