@@ -113,4 +113,76 @@ class A{
     }
 }
 
-Task 7> Find the factorial of each number....
+Task 7> Fibonacci series 
+class A {
+    public static void main(String[] args) {
+        int f1 = 0;
+        int f2 = 1;
+        int f3 = 0;
+        System.out.println("f1 is "+ f1 + " and " +"f2 is "+ f2);
+        int n = 10;
+        
+        for(int i = 1; i <= n-2; i++){
+            //Swaping
+            f1 = f2;
+            f2 = f3;
+            f3 = f1+f2;
+            System.out.println(f3+"");
+        }
+    }
+}
+//Output
+f1 is 0 and f2 is 1
+0
+1
+2
+3
+5
+8
+13
+21
+
+//Another Way..............
+class A {
+    public static void main(String[] args) {
+        int f1 = 0;
+        int f2 = 1;
+        int f3 = 0;
+        // System.out.println("f1 is "+ f1 + " and " +"f2 is "+ f2);
+        int n = 10;
+        
+        for(int i = 1; i <= n-2; i++){
+            //Swaping
+            f1 = f2;
+            f2 = f3;
+            f3 = f1+f2;
+        }
+        System.out.println(f3 + " ");
+    }
+}
+//Output:-
+21
+
+Task 8>//Prime Number....
+class A{
+    public static void main(String[] args){
+        for(int j = 0 ; j <= 10; j++){
+            int no = j;
+            boolean flag = true;
+            
+            for(int i = 2; i <= no; i++){
+                if(no % i == 0){
+                    flag = false;
+                    break;
+                }
+            }
+            
+            if(flag == true){
+                System.out.println("Prime Number!!!");
+            }
+            else{
+                 System.out.println("Not Prime Number!!!");
+            }
+        }
+    }
+}
