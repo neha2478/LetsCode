@@ -6,6 +6,7 @@ Tasks List
 4> Sum of each digits in a Number
 5> Swaping two Numbers with 3rd variable
 6> Swaping two Numbers without 3rd variable
+7> Factors of two Numbers.
 */
 
 Task 1> //Reverse a number
@@ -183,6 +184,17 @@ class A{
             else{
                  System.out.println("Not Prime Number!!!");
             }
+        }
+    }
+}
+
+Task 9> Java Programs to Display Factors of a Number
+class A{
+    public static void main(String[] args) {
+        int number = 60;
+        System.out.println("Factors of"+ number + " are: ");
+        for(int i = 1; i <= number ; i++){
+             System.out.println(i + " ")
         }
     }
 }
