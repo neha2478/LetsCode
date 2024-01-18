@@ -2,23 +2,27 @@
 
 //All task notes...
 1> To take a user Input from , here we will use Scanner package....
-2> Java Program to add two integers...
-3> Java Program to multipy two floating Numbers...
-4> Java program to find ASCII values of chracters...
-5> Java Programm  to compute Quotient and Reminder...
-6> Java Programm to swap two Numbers..(with 3rd variable / without 3rd variable)
-7> To check weather even or not...
-8> Java Program to check wheather an Alphabet is vowel or Consonent.
-9> To check wheather the alphabet is vowel or consonet...
-10> Java Program to find the Roots of Quadratic Equations....
-11> To check the number is Leap year or not
-12> To check wheather the number is positive or not.
-13> Java Program to Check Weather a Character is Alphabet or Not
-14> find the sum of natural numbers...
-15> Java Program to Find Factorial of a number.
-16> Program to generate Multiplication of Table..
-17> Java Program to Display Fiboncci Series...
-18> Java Program to find GCD of two numbers.
+2> Add two integers...
+3> Multipy two floating Numbers...
+4> Find ASCII values of chracters...
+5> To Compute Quotient and Reminder...(Find Quotient and Reminder)
+6> Swap two Numbers..(with 3rd variable / without 3rd variable)
+7> To Check weather the number is even or not...
+8> Check wheather an Alphabet is vowel or Consonent.
+9> To check Wheather the alphabet is vowel or consonet...
+10> find the Roots of Quadratic Equations....
+11> Check the Number is Leap year or not
+12> wheather the number is positive or not.
+13> Check Weather a Character is Alphabet or Not
+14> Sum of natural numbers...
+15> Find Factorial of a number.
+16> generate Multiplication of Table..
+17> Display Fiboncci Series...
+18> find the GCD of two numbers.
+19> find the LCM of two numbers
+20> Display the Characters from A - Z
+21> Count the Number of Digits in a Number...
+22> Count the number of charcters in a String.
 
 Task 1>
 //To take a user Input from , here we will use Scanner package....
@@ -517,7 +521,7 @@ First 5 terms:
 0 + 1 + 1 + 2 + 3 + 
 */
 
-18> find.....GCD of Two Numbers...
+Task 18> find.....GCD of Two Numbers...
 class A{
     public static void main(String[] args){
         //To find the GCD of two Numbers... (greatest common Divisor)
@@ -540,7 +544,7 @@ Output:-
 The GCD of 81 and 153 = 9*/
 
 
-19>Find.....LCM of TWO NUMBERS...
+Task 19>Find.....LCM of TWO NUMBERS...
 class A{
     public static void main(String[] args){
         //Find the LCM of two Numbers...
@@ -564,7 +568,7 @@ class A{
 The LCM of 72 and 120  = 360
 */
 
-20> TO DISPLAY the CHARACTERS from A to Z
+Task 20> TO DISPLAY the CHARACTERS from A to Z
 class A{
     public static void main(String[] args){
         //To display the characters from A - Z;
@@ -578,7 +582,7 @@ class A{
 Output:-
 A B C D E F G H I J K L M......... Z */
 
-21> Count the Number of Digits in a Number...
+Task 21> COUNT The Number of DIGITS in a NUMBER...
 class Main{
     public static void main(String[] args){
         //To count the Number of digits in a number;
@@ -597,3 +601,70 @@ class Main{
     
     }
 }
+
+TASK 22> COUNT the no of CHARCTERS IN the String...
+class Main{
+    public static void main(String[] args){
+        //To coundthe character in a string..
+        
+        String str = "My name is Shruti";
+        int cnt = 0; // to count the number of charcters..
+        
+        for(int i = 0 ; i <= str.length()-1 ; i++){
+            //if there is no space in that index... use charAt() to fetch the charcter at thta index...
+            if(str.charAt(i) != ' '){
+                cnt++;
+            }
+            
+        }
+        System.out.println("The no of charcters in the String is "+ cnt);
+        
+    }
+}
+
+/*
+Output:- 
+The no of characters in String is 14
+*/
+
+Task 23> RREVERSE a Number
+class Main{
+    public static void main(String[] args){
+        //Reverse of a number...
+        int num = 3456789;
+        int reverse = 0;
+        
+        while(num != 0 ){
+            int rem = num % 10;
+            reverse = reverse * 10 + rem;
+            num = num / 10;
+        }
+        
+        System.out.println("The reverse of the is " + reverse);
+    }
+}
+/**
+O/p:-
+The reverse of the number is 9876543
+**/
+
+Task 24> Calculate the EXPONENT of NUMBER
+class Main{
+    public static void main(String[] args){
+        //Exponent of the number..
+        int a = 3, b = 4;
+        //a is base and b is Exponent
+        
+        int res = 1;
+        
+        while(b != 0){
+            res *= a;
+            --b; //each thime it will decrement the value then use ...(predecement)
+        }
+        System.out.println(res);
+    }
+}
+/*
+O/p:-
+81
+*/
