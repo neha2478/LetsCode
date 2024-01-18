@@ -23,6 +23,9 @@
 20> Display the Characters from A - Z
 21> Count the Number of Digits in a Number...
 22> Count the number of charcters in a String.
+23> Calculate the EXPONENT of NUMBER
+24> REVERSE a Number
+25> Number is Palindrome / Not
 
 Task 1>
 //To take a user Input from , here we will use Scanner package....
@@ -627,7 +630,7 @@ Output:-
 The no of characters in String is 14
 */
 
-Task 23> RREVERSE a Number
+Task 23> REVERSE a Number
 class Main{
     public static void main(String[] args){
         //Reverse of a number...
@@ -658,7 +661,7 @@ class Main{
         int res = 1;
         
         while(b != 0){
-            res *= a;
+            res *= a; //every thatit will multiply the number ...
             --b; //each thime it will decrement the value then use ...(predecement)
         }
         System.out.println(res);
@@ -668,3 +671,82 @@ class Main{
 O/p:-
 81
 */
+
+
+Task 25> Whether the number is PALINDROME / not
+public class A
+{
+	public static void main(String[] args) {
+	    //Palindrome of a Number...
+	    int num = 123456;
+	    int copy = num;
+	    int rev = 0;
+	    
+	    while(num != 0){
+	        int rem = num % 10;
+	        rev = rev * 10 + rem;
+	        num = num / 10; // this is used to fetch the numbers except the last digit as it divisible by 10. 
+	    }
+	    System.out.println("The reverse of the number is :"+ rev);
+	    
+	    if(copy == rev){
+	        System.out.println("The is palindrome!!");
+	    }
+	    else{
+	        System.out.println("The is not palindrome!!");
+	    }
+	    
+	}
+}
+
+Task 26> Check weather Prime number or not....
+public class A{
+    public static void main(String[] args){
+
+    int num = 20;
+    boolean flag = false;
+
+    for(int i = 2; i <= n ; ++i){
+        if(n % i == 0){
+            flag = false;
+            break;
+        }
+    }
+    if(flag == true){
+        System.out.println( num + " ia a Palindrome number");
+    }
+    else{
+        System.out.println(num + "is not a Palindrome number");
+    }
+}
+
+Task 27> AMSTRONG NUMBER...
+public class Amstrong
+{
+	public static void main(String[] args) {
+	    //To check weather Amstrong Number or not....
+	    int number = 371, orignalNumber , remainder, result = 0;
+	    
+	    orignalNumber = number;
+	    
+	    while(orignalNumber != 0){
+	        remainder = orignalNumber % 10;
+	        result += Math.pow(remainder, 3);
+	        orignalNumber = orignalNumber / 10;
+	    }
+	    
+	    if(result == number){
+	        System.out.println("The " + number + " is Amstrong number");
+	    }
+	    else{
+	        System.out.println("The " + number + " is not a Amstrong number");
+	    }
+	}
+}
+
+/*
+Output:-
+The 371 is a Amstrong Number
+*/
+
+Task 28> Display prime number between 2 Numbers.
