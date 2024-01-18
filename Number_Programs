@@ -198,3 +198,19 @@ class A{
         }
     }
 }
+
+//Code from all program app....
+
+//Java Program  to print an Integer....(Enter by the user Input...)
+//To take a user Input from , here we will use Scanner package....
+import java.util.Scanner;
+class A{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number:"); //here we didn't put the println coz we want to take input after colon....
+        
+        int a = sc.nextInt(); //It will take integer input...
+        
+        System.out.println("Your Entered Number" + " is " + a );
+    }
+}
