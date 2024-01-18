@@ -1,17 +1,26 @@
 //Here we will write all the coading things....
 
 //All task notes...
-1>To take a user Input from , here we will use Scanner package....
-2>Java Program to add two integers...
+1> To take a user Input from , here we will use Scanner package....
+2> Java Program to add two integers...
 3> Java Program to multipy two floating Numbers...
-4>Java program to find ASCII values of chracters...
+4> Java program to find ASCII values of chracters...
 5> Java Programm  to compute Quotient and Reminder...
-6>Java Programm to swap two Numbers..(with 3rd variable / without 3rd variable)
-7>To check weather even or not...
-8>Java Program to check wheather an Alphabet is vowel or Consonent.
+6> Java Programm to swap two Numbers..(with 3rd variable / without 3rd variable)
+7> To check weather even or not...
+8> Java Program to check wheather an Alphabet is vowel or Consonent.
+9> To check wheather the alphabet is vowel or consonet...
+10> Java Program to find the Roots of Quadratic Equations....
+11> To check the number is Leap year or not
+12> To check wheather the number is positive or not.
+13> Java Program to Check Weather a Character is Alphabet or Not
+14> find the sum of natural numbers...
+15> Java Program to Find Factorial of a number.
+16> Program to generate Multiplication of Table..
+17> Java Program to Display Fiboncci Series...
+18> Java Program to find GCD of two numbers.
 
-
-1>Task 1
+Task 1>
 //To take a user Input from , here we will use Scanner package....
 
 import java.util.Scanner;
@@ -27,7 +36,7 @@ class A{
     }
 }
 
-2> Task 2:- Java Program to add two integers...
+Task 2> Task 2:- Java Program to add two integers...
 class A{
     public static void main(String args[]){
        int fir = 1234;
@@ -41,7 +50,7 @@ class A{
 //Output:-
 //The sum is : 4690
 
-3> Java Program to multipy two floating Numbers...
+Task 3> Java Program to multipy two floating Numbers...
 class MultiplyFloatingpoints{
     public static void main(String args[]){
         //in java the data type for float we using f literal... which is compulsory..
@@ -56,7 +65,7 @@ class MultiplyFloatingpoints{
 }
 
 
-4>Java program to find ASCII values of chracters...
+Task 4>Java program to find ASCII values of chracters...
 class AsciiValue{
     public static void main(String args[]){
         char ch = 'a';
@@ -69,7 +78,7 @@ class AsciiValue{
     }
 }
 
-5>  Java Programm  to compute Quotient and Reminder...
+Task 5>  Java Programm  to compute Quotient and Reminder...
 class Quotien_And_Reminder{
     public static void main(String args[]){
         int a = 25 , b = 45;
@@ -87,7 +96,7 @@ The Quotient of a and b = 0
 The Reminder of a nad b = 25
 
 
-6> Java Programm to swap two Numbers..(with 3rd variable / without 3rd variable..)
+Task 6> Java Programm to swap two Numbers..(with 3rd variable / without 3rd variable..)
 //with 3rd variable...
 class SwaptwoNumbers_ThirdVar{
     public static void main(String[] args){
@@ -160,7 +169,7 @@ b = 34
 */
 
 
-7>To check weather even or not...
+Task 7>To check weather even or not...
 //Importing the scanner class...
 import java.util.Scanner;
 class A{
@@ -186,7 +195,7 @@ Enter a number: 45
 45 is odd
 */
 
-8> //To check wheather the alphabet is vowel or consonet...
+Task 8> //To check wheather the alphabet is vowel or consonet...
 class Main{
     public static void main(String[] args){
         
@@ -208,7 +217,7 @@ class Main{
   f is  a consonent
 */
 
-9>
+Task 9> To check wheather the alphabet is vowel or consonet...
 class Main{
     public static void main(String[] args){
         //tO find largest among 3 number...
@@ -236,7 +245,7 @@ The Largest number is 3.9
 Using user Inputs...
 import java.util.Scanner;
 
-class Main{
+class A{
     public static void main(String[] args){
         
         //tO find largest among 3 number...
@@ -267,3 +276,324 @@ class Main{
     }
 }*/
 
+Task 10> Java Program to find the Roots of Quadratic Equations....
+class Main{
+    public static void main(String[] args){
+        //Logic
+        double a = 2.3, b = 4.5, c = 5.6;
+        double root1, root2;
+        
+        double determinant = b *b - 4 * a * c;
+        
+        if(determinant  > 0){
+            root1 = (-b + Math.sqrt( determinant )) / (2 * a);
+            root2 = (-b - Math.sqrt( determinant )) / (2 * a);
+            
+            System.out.println("root = %.2f and root2 = %.2f", root1 , root2);
+        }
+        
+        else if(determinant == 0){
+            root1 = root2 = -b / (2 * a);
+            
+            System.out.println("root1 = root2 = %2.f;", root1);
+        }
+        
+        else{
+            double realPart = -b / (2*a);
+            double imaginaryPart = Math.sqrt(-determinant) / (2 * a);
+            
+            System.out.println("root1 = %.2f+%.2fi and root2 =  %.2f+%.2fi", rrot1, root2);
+        }
+    
+    }
+}
+
+Task 11> Java Program to Check Leap Year
+class Main{
+    public static void main(String[] args){
+        
+        int y = 1900; // y is year
+        boolean l = false; // l is leap
+        
+        if(y % 4 == 0){
+            if(y % 100 == 0){
+                if(y % 400 == 0)
+                    l = true;
+                else
+                    l = false;
+            }
+            else
+                l = true;
+                
+        }
+        else{
+            l = false;
+        }
+                
+        if(l){
+            System.out.println(y + " is a leap year.");
+        }
+        else{
+            System.out.println(y + " is not a leap year.");
+        }
+    }
+}
+
+/*
+Output:-
+1900 is not a leap year
+*/
+/*
+Logic 
+if the number is divisible by divisible by 4, 100, 400 then a leap year,
+if the number is divisible by divisible by 4, 100 then not a leap year,
+if the number is divisible by divisible by 4 is a leap year,
+if the number is not divisible by divisible by 4 is not a leap year.
+*/
+
+Task 12> Java Program to check Weather a Number is Positive or Negative
+class Main{
+    public static void main(String[] args){
+        double a = 12.3;
+        
+        if( a < 0.0){
+            System.out.println(a + " is a negative number.");
+        }
+        else if(a > 0.0){
+            System.out.println(a + " is a positive number.");
+        }
+        else{
+            System.out.println(a + " is 0.");
+        }    
+    }
+}
+/*
+Output:- 
+12.3 is a positive number.
+*/
+
+
+
+Task 13> Java Program to Check Weather a Character is Alphabet or Not
+class Main{
+    public static void main(String[] args){
+        //Check wheather that the character is  an alphabet or not...
+        //Without user input...
+        
+        char ch = 'A';
+        
+        if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')){
+            System.out.println(ch  + " is an Alphabet.");
+        }
+        else{
+            System.out.println(ch  + " is a Special Character.");
+        }
+        
+    }
+}
+/*
+Output:-
+A is an Alphabet
+*/
+
+
+14> find the SUM OF NATURAL NUMBERS...
+class Main{
+    public static void main(String[] args){
+       //To claculate the sum of Natural Numbers...
+       
+       int num = 100, sum = 0;
+       
+       //natural numbers are from 1...excluded 0
+       for(int i = 1 ; i <= num ; i++){
+           sum += i;
+       }
+       
+       System.out.println("Sum of "+ num + " natural numbers " + " = " + sum);
+        
+    }
+}
+/*
+Output:-
+Sum of 100 natural numbers = 5050*/
+
+
+15> Java Program to Find FACTORIAL OF NUMBER.
+class Main{
+    public static void main(String[] args){
+       //To Find the factorial of Number.....
+       
+       int num = 10;
+       int fact = 1;
+       
+       for(int i = 1 ; i <= num ; i++){
+           fact = fact * i;
+       }
+        System.out.println("Factorial of " + num + " is " + fact);
+        //Another way of doing this is...
+        // System.out.printf("Factorial of %d = %d", num);
+        
+    }
+}
+/**
+AnotherLogic  for for loop
+for(int i = num ; i >= 1; i --){
+fact *= 1;
+}
+**/
+/*
+Output:-
+Factorial of 10 is 3628800*/
+
+
+16> Program to generate MULTIPLICATION OF TABLE.
+//Using user input
+import java.util.Scanner;
+
+classGen_Multiplication_Table{
+    public static void main(String[] args){
+       //to generate multiplication table
+       
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt(); //to take integer input from user...
+        
+        System.out.println("User input is : " + num);
+       
+        for(int i = 1; i <= 10 ; i++){
+           System.out.println(num + " * " + i + " = " + num * i);
+       }
+        
+    }
+}
+
+//With out user input..
+class Gen_Multiplication_Table{
+    public static void main(String[] args){
+       //to generate multiplication table
+        int num = 5;
+       
+        for(int i = 1; i <= 10 ; i++){
+           System.out.println(num + " * " + i + " = " + num * i);
+           //Another way of writing is...
+           System.out.printf("%d * %d = %d \n", num)
+       }
+        
+    }
+}
+
+Task 17> Java Program to Display FIBONACCI SERIES....
+class Fibonacci{
+    public static void main(String[] args){
+        //Fibonacci of Number...
+        //Sir taught...
+        // int n = 5;
+        // int f1 = 0, f2 = 1, f3 = 0;
+        // System.out.println("The Fibonacci of first"+ n + " terms :" );
+        
+        // for(int i = 1; i <= n ; i++){
+        //     f1 = f2;
+        //     f2 = f3;
+        //     f3 = f1 + f2;
+        //     System.out.println(f3 + "");
+        // }
+        
+        //Another method...
+        int n = 5, t1= 0, t2 = 1;
+        System.out.println("First "+ n + " terms: ");
+        
+        for(int i = 1; i <= n ; ++i){
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+            System.out.print(t1 + " + ");
+        }
+        
+    }
+}
+
+/*
+Output:-
+First 5 terms:
+0 + 1 + 1 + 2 + 3 + 
+*/
+
+18> find.....GCD of Two Numbers...
+class A{
+    public static void main(String[] args){
+        //To find the GCD of two Numbers... (greatest common Divisor)
+        int n1 = 81, n2 = 153 , gcd = 1; //here we took two numbers and gcd we assigned with1
+        
+        //for ++i we put a preincrement...
+        //Logic behind this is i should between 1 and less than equals to n1 and n2 , and preincrement ...
+        for(int i = 1; i <= n1 && i <= n2 ; ++i){
+            if( n1 % i == 0 && n2 % i == 0){
+                gcd = i;
+            }
+        }
+        
+        System.out.println(" The GCD of " + n1 + " and "+ n2 + " = " + gcd);
+        
+    }
+}
+/*
+Output:- 
+The GCD of 81 and 153 = 9*/
+
+
+19>Find.....LCM of TWO NUMBERS...
+class A{
+    public static void main(String[] args){
+        //Find the LCM of two Numbers...
+        int n1 = 72 , n2 = 120, lcm;
+        
+        //logic.. behind this is... if the greatest number anomgst two is lcm
+        lcm = (n1 > n2) ? n1 : n2 ; //ternary operator...
+        
+        while(true){
+           // if lcm is divisible by n1 and n2 than
+            if(lcm % n1 == 0 && lcm % n2 == 0){
+                System.out.println("The LCM of "+ n1 + " and "+ n2 + " = " + lcm);
+                break;
+            }
+            ++lcm;
+        }
+    }
+}
+
+/*Output:-
+The LCM of 72 and 120  = 360
+*/
+
+20> TO DISPLAY the CHARACTERS from A to Z
+class A{
+    public static void main(String[] args){
+        //To display the characters from A - Z;
+        for(char ch = 'A'; ch <= 'Z'; ch++){
+            System.out.print(ch + " "); //it will print the characters after each character it will print space.
+        }
+    
+    }
+}
+/*
+Output:-
+A B C D E F G H I J K L M......... Z */
+
+21> Count the Number of Digits in a Number...
+class Main{
+    public static void main(String[] args){
+        //To count the Number of digits in a number;
+        
+        //Logic of code is...
+        //Take a random number
+        int num = 123456;
+        int count = 0;
+        //Check weather it is equals to 0 or not...
+        while(num != 0 ){   
+            num = num / 10; //(Used to remove last git to count the no of digits in that number!!)
+            ++count; //increment first than using that ...
+        }
+        
+        System.out.println("The number "+ num + " have no of digits" + " = " + count);
+    
+    }
+}
