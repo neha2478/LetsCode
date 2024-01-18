@@ -1,0 +1,269 @@
+//Here we will write all the coading things....
+
+//All task notes...
+1>To take a user Input from , here we will use Scanner package....
+2>Java Program to add two integers...
+3> Java Program to multipy two floating Numbers...
+4>Java program to find ASCII values of chracters...
+5> Java Programm  to compute Quotient and Reminder...
+6>Java Programm to swap two Numbers..(with 3rd variable / without 3rd variable)
+7>To check weather even or not...
+8>Java Program to check wheather an Alphabet is vowel or Consonent.
+
+
+1>Task 1
+//To take a user Input from , here we will use Scanner package....
+
+import java.util.Scanner;
+
+class A{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number:"); //here we didn't put the println coz we want to take input after colon....
+        
+        int a = sc.nextInt(); //It will take integer input...
+        
+        System.out.println("Your Entered Number" + " is " + a );
+    }
+}
+
+2> Task 2:- Java Program to add two integers...
+class A{
+    public static void main(String args[]){
+       int fir = 1234;
+       int sec = 3456;
+       
+       int sum = fir + sec;
+       
+       System.out.println("The sum is : "+ sum);
+    }
+}
+//Output:-
+//The sum is : 4690
+
+3> Java Program to multipy two floating Numbers...
+class MultiplyFloatingpoints{
+    public static void main(String args[]){
+        //in java the data type for float we using f literal... which is compulsory..
+       float first = 1.5f;
+       
+       float second = 2.0f;
+       
+       float prod = first + second;
+       
+       System.out.println("The product is: " + prod);
+    }
+}
+
+
+4>Java program to find ASCII values of chracters...
+class AsciiValue{
+    public static void main(String args[]){
+        char ch = 'a';
+        int ascii = ch;
+        int castAscii = (int) ch; //here we have used type casting 
+        
+        System.out.print("The ASCII value of "+ ch + " is: " + ascii );
+        System.out.println();
+        System.out.println("The ASCII value of "+ ch + " is: " + castAscii );
+    }
+}
+
+5>  Java Programm  to compute Quotient and Reminder...
+class Quotien_And_Reminder{
+    public static void main(String args[]){
+        int a = 25 , b = 45;
+        
+        int quotient = a / b;
+        int reminder = a % b;
+        
+        System.out.println("The Quotient of a and b = "+ quotient);
+        System.out.println("The Reminder of a nad b = " + reminder);
+    }
+}
+
+//Output:-
+The Quotient of a and b = 0
+The Reminder of a nad b = 25
+
+
+6> Java Programm to swap two Numbers..(with 3rd variable / without 3rd variable..)
+//with 3rd variable...
+class SwaptwoNumbers_ThirdVar{
+    public static void main(String[] args){
+        int a = 34, b = 45;
+        
+        //Who the look before swaping...
+        System.out.println("--Before Swaping---");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        
+        //Now the logic is...
+        int temp = a;
+        a = b;
+        b = temp;
+        
+        //Who the look after swaping...
+        System.out.println("--After Swaping---");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
+
+/*
+Output:- 
+--Before Swaping---
+a = 34
+b = 45
+--After Swaping---
+a = 45
+b = 34
+*/
+
+//without 3rd variable...
+class SwaptwoNumbers_ThirdVar{
+    public static void main(String[] args){
+        int a = 34, b = 45;
+        
+        //Who the look before swaping...
+        System.out.println("--Before Swaping---");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        
+        //Now the logic is...
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        
+        //Who the look after swaping...
+        System.out.println("--After Swaping---");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
+
+//Another logic for the code...
+/*Now the logic is...
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+*/
+//Here we will get same output only...
+/*
+Output:- 
+--Before Swaping---
+a = 34
+b = 45
+--After Swaping---
+a = 45
+b = 34
+*/
+
+
+7>To check weather even or not...
+//Importing the scanner class...
+import java.util.Scanner;
+class A{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        int num = sc.nextInt();
+        System.out.println("Enter a number: " +  num );
+        
+        if(num % 2 == 0){
+            System.out.println( num + " is even ");
+        }
+        else{
+             System.out.println(num + " is odd");
+        }
+    }
+}
+
+/*
+Output:- 
+45
+Enter a number: 45
+45 is odd
+*/
+
+8> //To check wheather the alphabet is vowel or consonet...
+class Main{
+    public static void main(String[] args){
+        
+       //To check wheather the alphabet is vowel or consonet...
+       char ch = 'a';
+       
+       if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+           System.out.println(ch +  " is vowel");
+       }
+       else{
+           System.out.println(ch + "is not a consonent");
+       }
+    }
+}
+
+/*
+  Output:- 
+  a is a vowel
+  f is  a consonent
+*/
+
+9>
+class Main{
+    public static void main(String[] args){
+        //tO find largest among 3 number...
+        double n1 = -4.5, n2 = 3.9, n3 = 2.5;
+        
+        if(n1 >= n2 && n1 >= n3){
+            System.out.println("The Largest number is " + n1);
+        }
+        else if(n2 >= n1 && n2 >= n3){
+            System.out.println("The Largest number is " + n2);
+        }
+        
+        else{
+           System.out.println("The Largest number is " + n3); 
+        }
+    }
+}
+
+/*
+Output:-
+The Largest number is 3.9 
+*/
+
+/*
+Using user Inputs...
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        
+        //tO find largest among 3 number...
+        // Taking the user input
+        System.out.println("Take there user inputs...");
+        
+        Scanner sc = new Scanner(System.in);
+        double n1 = sc.nextDouble();
+        double n2 = sc.nextDouble();
+        double n3 = sc.nextDouble();
+        
+        System.out.println("Number 1 is : " + n1);
+        System.out.println("Number 2 is : " + n2);
+        System.out.println("Number 3 is : " + n3);
+        
+        
+        if(n1 >= n2 && n1 >= n3){
+            System.out.println("The Largest number is " + n1);
+        }
+        
+        else if(n2 >= n1 && n2 >= n3){
+            System.out.println("The Largest number is " + n2);
+        }
+        
+        else{
+           System.out.println("The Largest number is " + n3); 
+        }
+    }
+}*/
+
