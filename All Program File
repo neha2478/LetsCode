@@ -1026,3 +1026,91 @@ class Factors{
         }
     }
 }
+
+Task 35> To create PYRAMID and PARTTERN...
+public class Main
+{
+	public static void main(String[] args) {
+		int r = 5;
+		// i for no of rows and j for no of columns
+		for(int i = 0; i <= r ; i++){
+		    
+		    //  values changing acc. to outer loop  for i ..
+		    for(int j = 0; j <= i ; j++){
+		        //print stars
+		        System.out.print("* "); //it will print the stars in the same Line...
+		    }
+		     // ending line after each row
+		    System.out.println();//for new line
+		}
+		
+	}
+}
+
+/*
+
+O/p:-
+*
+* *
+* * * 
+* * * *
+* * * * *
+*/
+
+//Using functions
+//Using a method we can do...
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		int r = 5;
+        partternStars(r); //calling the methods...
+		
+	}
+	
+	
+	static void partternStars(int row){
+	    
+	    for(int i = 0 ; i <= row ; i++){
+	        for(int j = 0 ; j <= i ; j++){
+	            System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+Task --- //To Print reverse parttern...
+
+//Using a method we can do...
+public class Main
+{
+	public static void main(String[] args) {
+	     int r = 5;
+       	     partternStars(r); //calling the methods...
+		
+	}
+	
+	//for reverse parttern
+	static void partternStars(int row){
+	//Logic of the code....
+	    int i, j;
+	    for(i = 0 ; i <= row ; i++){
+	        
+	        // inner loop to handle number spaces
+            // values changing acc. to requirement
+	        for(j = 2 * (row - i); j >= 0 ; j--){
+	            
+	            System.out.print(" ");
+	        }
+	        
+	        //  inner loop to handle number of columns
+            //  values changing acc. to outer loop
+	        for(j = i ; j >= 0 ; j--){
+	            
+	            System.out.print("* ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
