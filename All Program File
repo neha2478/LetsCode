@@ -26,6 +26,17 @@
 23> Calculate the EXPONENT of NUMBER
 24> REVERSE a Number
 25> Number is Palindrome / Not
+26> Check weather Prime number or not....
+27> AMSTRONG NUMBER...
+28> Display PRIME NUMBERS BETWEEN TWO NUMBERS
+29> Find Factorial of a NUMBER Using RECURSION.
+30 >Find the SUM OF N NATURAL NUMBERS Using RECURSION.
+31> Check Wreather A Number can be EXPRESSED AS SUM OF PRIME NUMBERS.
+32> To Make a SIMPLE CALCULATOR using SWITCH CASE.
+33> Display the FACTORS OF A NUMBER.
+34>Display ASTRONG NUMBER BETWEEN TWO INTERVALS.
+
+
 
 Task 1>
 //To take a user Input from , here we will use Scanner package....
@@ -125,7 +136,6 @@ class SwaptwoNumbers_ThirdVar{
         System.out.println("b = " + b);
     }
 }
-
 /*
 Output:- 
 --Before Swaping---
@@ -194,13 +204,13 @@ class A{
         }
     }
 }
-
 /*
 Output:- 
 45
 Enter a number: 45
 45 is odd
 */
+
 
 Task 8> //To check wheather the alphabet is vowel or consonet...
 class Main{
@@ -217,12 +227,12 @@ class Main{
        }
     }
 }
-
 /*
   Output:- 
   a is a vowel
   f is  a consonent
 */
+
 
 Task 9> To check wheather the alphabet is vowel or consonet...
 class Main{
@@ -242,7 +252,6 @@ class Main{
         }
     }
 }
-
 /*
 Output:-
 The Largest number is 3.9 
@@ -283,6 +292,7 @@ class A{
     }
 }*/
 
+
 Task 10> Java Program to find the Roots of Quadratic Equations....
 class Main{
     public static void main(String[] args){
@@ -314,6 +324,7 @@ class Main{
     
     }
 }
+
 
 Task 11> Java Program to Check Leap Year
 class Main{
@@ -357,6 +368,7 @@ if the number is divisible by divisible by 4, 100 then not a leap year,
 if the number is divisible by divisible by 4 is a leap year,
 if the number is not divisible by divisible by 4 is not a leap year.
 */
+
 
 Task 12> Java Program to check Weather a Number is Positive or Negative
 class Main{
@@ -488,6 +500,7 @@ class Gen_Multiplication_Table{
     }
 }
 
+
 Task 17> Java Program to Display FIBONACCI SERIES....
 class Fibonacci{
     public static void main(String[] args){
@@ -523,6 +536,7 @@ Output:-
 First 5 terms:
 0 + 1 + 1 + 2 + 3 + 
 */
+
 
 Task 18> find.....GCD of Two Numbers...
 class A{
@@ -699,6 +713,7 @@ public class A
 	}
 }
 
+
 Task 26> Check weather Prime number or not....
 public class A{
     public static void main(String[] args){
@@ -719,6 +734,7 @@ public class A{
         System.out.println(num + "is not a Palindrome number");
     }
 }
+
 
 Task 27> AMSTRONG NUMBER...
 public class Amstrong
@@ -749,4 +765,264 @@ Output:-
 The 371 is a Amstrong Number
 */
 
-Task 28> Display prime number between 2 Numbers.
+Task 28> Display PRIME NUMBERS BETWEEN TWO NUMBERS
+public class A
+{
+	public static void main(String[] args) {
+		int low = 20 , high = 50;
+		
+		//check whether the low is less than high or not.
+		while(low < high){
+		    boolean flag = false;
+		    
+		    for(int i  = 2; i <= low/2 ; ++i){
+		        if(low % i == 0){
+		            flag = true;
+		            break;
+		        }
+		    }
+		    
+		    if(!flag){
+		       System.out.print(low + " ");
+		    }
+		    ++low;
+		}
+	}
+}
+
+/*
+Another Logic... we got...
+herewe can take th user input..
+for(int i = a; i <= b ; i++){
+            
+            //skip 0 and 1 as they are 
+            //neither prime ornor composite numbers...
+            if(i == 1 || i == 0){
+                continue;
+            }
+            
+            int num = i;
+            boolean flag = false;
+            
+            for(int j = 2; j <= num/2; ++j){
+                if(num / j == 0){
+                    flag = false;
+                    break;
+                }
+            }
+            
+            if(false == true){
+                System.out.println(i + " "); //all the prime no in rang with space print them...
+            }
+        }
+*/
+
+
+Task 29>Program to Find Factorial of a Number Using Recursion.
+//Recursion Logic...
+public class A{
+    
+    public static long fact(int num){
+        //without using for Loop...
+        if(num > 1){
+            return num * fact(num - 1); //Recursion Logic...
+        }
+        else{
+            return 1;
+        }
+    }
+    public static void main(String[] args){
+        //To find the factorial of a number using recursion...
+        int num = 5;
+        long res = fact(num); //calling the method and passing the num and storing into a variable of type Long..
+        
+        System.out.println("The Factorial of "+ num + " = " + res);
+    }
+}
+//Even wecan do using user input...
+
+
+Task 30 >Find the SUM OF N NATURAL NUMBERS Using RECURSION.
+public class A{
+    public static int sumOfNaturalNum(int num){
+        //without using for Loop...
+        if(num != 0){
+            return num + sumOfNaturalNum(num - 1); //recursive call - calling recursively...
+        }
+        else{
+            return num;
+        }
+    }
+    
+    public static void main(String[] args){
+        
+        //To find the factorial of a number using recursion...
+        int a = 10;
+        int sum = sumOfNaturalNum(a); //calling the natural numbers...
+        System.out.println("Sum = "+ sum);
+    }
+}
+/*
+Sum = 55
+*/
+
+Task 31> Check Wreather A Number can be EXPRESSED AS SUM OF PRIME NUMBERS.
+public class A{
+    public static boolean checkprime(int num){
+        boolean isPrime = true;
+        
+        for(int i = 2; i <= num/2 ; i++){
+            if(num % i == 0){
+                isPrime = false;
+                break;
+            }
+        }
+        
+        return isPrime;
+    }
+    
+    
+    public static void main(String[] args){
+        int number = 34;
+        boolean flag = false;
+        for(int i = 2; i <= number/ 2; i++){
+            if(checkprime(i)){
+                if(checkprime(number - i)){
+                        System.out.printf("%d = %d +%d\n", number, i , number - i); //here we have specifically used the printf to print like that..
+                        flag = true;
+                }
+            }
+        }
+        
+        if(!flag){
+            System.out.println(number + "Cannot be expressed as sum of two prime numbers!!");
+        }
+    }
+}
+
+/*
+34 = 3+ 31
+34 = 5 + 29
+34 = 11 + 23
+34 = 17 + 17
+*/
+
+
+Task 32>To Make a SIMPLE CALCULATOR using SWITCH CASE. (Using user Input..)
+//Using user Input...
+import java.util.Scanner;
+
+public class Main{
+   public static void main(String[] args){
+       
+       //Using Scanner class to take user input...
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter two Numbers : ");
+       
+       //Taking input type double..
+       double a = sc.nextDouble();
+       double b = sc.nextDouble();
+       
+       System.out.println("Enter a chater to perform an operation (+ , - , / , % , *):");
+       char ch = sc.next().charAt(0); //to take character input
+       
+       double res;
+       
+       switch(ch){
+            case '+':
+                res = a + b;
+                 System.out.println("The result is " + res);
+                break;
+                
+            case '-':
+                res = a - b;
+                 System.out.println("The result is " + res);
+                break;
+                
+            case '/':
+                res = a / b;
+                System.out.println("The result is " + res);
+                break;
+                
+            case '%':
+                res = a % b;
+                 System.out.println("The result is " + res);
+                break;
+            
+            case '*':
+                res = a * b;
+                 System.out.println("The result is " + res);
+                break;
+                
+            default:
+                System.out.println("Error input of operator!!");
+                return;
+       }
+       
+    //  System.out.println("The result is " + res);
+   }
+}
+
+//Or wecan insert print statement each case seperately...., insted of keeping one time iutside the switch case..
+//To fech a character userser input - sc.next().charAt(0)
+
+
+
+Task 33> Display the FACTORS OF A NUMBER.
+class Factors{
+  
+    public static void main(String[] args){
+        
+        //Find the factors of two numbers...
+        int num = 60;
+        
+        System.out.print("The Factors of the Number is:"); //To print in same Line
+        
+        //Taking upto that number limit of for Loop
+        for(int i = 1 ; i <= num ; i++){
+            if(num % i == 0){
+                System.out.print( i + " "); //To print in same Line...
+            }
+        } 
+    }
+}
+/*
+O/P :- 
+The Factors of the Number is:1 2 3 4 5 6 10 12 15 20 30 60
+*/
+
+Task 34>Display ASTRONG NUMBER BETWEEN TWO INTERVALS.
+class Factors{
+  
+    public static void main(String[] args){
+        // Display ASTRONG NUMBER BETWEEN TWO INTERVALS.
+        
+        int low = 34 , high = 100;
+        
+        //here i is number..
+        for(int i = low + 1; i < high; i++){
+            
+            int nodigits = 0;
+            int res = 0;
+            
+            int copy = i; //storing the number securely
+            
+            while(copy != 0){
+                copy = copy / 10; //to count how many numbers are there...by taking quoitient
+                nodigits++; //for each time the above hapens it count increments..
+            }
+
+	    copy = i;
+
+            while(copy != 0 ){
+                int rem = copy % 10;
+                res  += Math.pow(rem, nodigits);
+                copy = copy / 10; //updating the number
+            }
+            
+            if(copy == res){
+                System.out.println(res + " ");
+            }
+        }
+    }
+}
