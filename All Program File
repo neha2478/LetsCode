@@ -10,7 +10,7 @@
 7> To Check weather the number is even or not...
 8> Check wheather an Alphabet is vowel or Consonent.
 9> To check Wheather the alphabet is vowel or consonet...
-10> find the Roots of Quadratic Equations....
+10> find the Roots of Quadratic Equations....  **** have to read this****
 11> Check the Number is Leap year or not
 12> wheather the number is positive or not.
 13> Check Weather a Character is Alphabet or Not
@@ -35,6 +35,18 @@
 32> To Make a SIMPLE CALCULATOR using SWITCH CASE.
 33> Display the FACTORS OF A NUMBER.
 34>Display ASTRONG NUMBER BETWEEN TWO INTERVALS.
+35> To create PYRAMID and PARTTERN...
+36> To CALCULATE THE AVERAGE OF THE ARRAY.... 
+37> Program to FIND THE LARGEST ELEMENT OF THE ARRAY....
+38> TO ADD TWO MATRIX USING MULTI DIMENSIONAL ARRAY....
+39> TO MULTIPLY TWO MATRIX USING MULTI DIMENSIONAL ARRAY....
+40> To TRANSOSE THE MATRIX
+41> To COUNT the Number of characters in STRING
+42> To COUNT the FREQUENCY of CHARCTER in String
+43> To Count the number of Vowels, Consonets , digits, Sapaces in the Sentence. 
+44> To SORT the element in LEXIOGRAPHICAL ORDER... **** have to read this****
+45>To REPLACE the S and O with in the string...
+46> To Find the Character position in the String
 
 
 
@@ -1113,4 +1125,426 @@ public class Main
 	        System.out.println();
 	    }
 	}
+}
+
+Task 36> To CALCULATE THE AVERAGE OF THE ARRAY....
+class A{
+    public static void main(String[] args){
+        //To Calculate Average using Arrays...
+        //here we have created an araay... of size double...
+        int[] arr = {23, 45, 67, 89, 100, 120, 236};
+        int sum = 0;
+        
+        //this is one way of using for loop
+        // for(double num : numArray){
+        //     sum += num;
+        // }
+        
+        //normal way of using for loop
+        for(int i = 0 ; i <= arr.length - 1 ; i++){
+            sum = sum + i;
+        }
+        
+        double average = sum /arr.length;
+        
+        System.out.println("The average of the array is : "+ average);
+    }
+}
+
+/*
+O/P:-
+The average of the array is : 3.0
+*/
+
+Task 37> Program to FIND THE LARGEST ELEMENT OF THE ARRAY....
+class A{
+    public static void main(String[] args){
+        //to find the largest element in the Array...
+        int arr[] = {12, 34, 56, 78, 89, 100};
+        int largest_ele = arr[0]; // we initialized that with arr[0] the ekment...
+        
+        for(int i = 0 ; i <= arr.length - 1; i++){
+            if(largest_ele < arr[i]){
+                largest_ele = arr[i];
+            }
+        }
+        
+        System.out.println("The largest element is :" + largest_ele);
+    }
+}
+
+//Another way using the for loop...
+class A{
+    public static void main(String[] args){
+        //to find the largest element in the Array...
+        int arr[] = {12, 34, 56, 78, 89, 100};
+        int largest_ele = arr[0]; // we initialized that with arr[0] the ekment...
+
+	//generally tis we used in Array list and collections...
+        for (int num : arr){
+            if(largest_ele < num){
+                largest_ele = num ;
+            }
+        }
+        
+        System.out.println("The largest element is :" + largest_ele);
+    }
+}
+/*
+Output:- 
+The largest element is : 100*/
+
+
+Task 38> TO ADD TWO MATRIX USING MULTI DIMENSIONAL ARRAY....
+class Main{
+    public static void main(String[] args){
+       //To Add two Matrix Using Multi-dimensional Array...
+       
+       int rows = 2, columns = 3;
+       
+       int[][] arr1 = { {2, 3, 4}, {4, 5, 6} };
+       int[][] arr2 = { {3, 4, 5}, {7, 8, 9} };
+       
+       int[][] sum = new int[rows][columns]; //here passing the rows and columns..
+       
+        //For loop to accelerate on the matrix/3 dimensional array..
+        //i for rows and j is for columns
+        for(int i = 0 ; i < rows; i++){ 
+            for(int j = 0 ; j < columns; j++){
+                sum[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+       
+        System.out.println("The sum of the two matrices is : ");
+        
+        for(int[] row : sum){
+            for(int column : row){
+                System.out.println(column + "   ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+
+Task 39> TO MULTIPLY TWO MATRIX USING MULTI DIMENSIONAL ARRAY....
+class Multiply_Matrix{
+    public static void main(String[] args){
+       //To Multiply two Matrix Using Multi-dimensional Array...
+       
+       int r1 = 2, c1 = 2;
+       int r2 = 3, c2 =2;
+       
+       int arr1[][] = { {2,3} , {4, 5} };
+       int arr2[][] = { {7,8} , {8, 10} , {4,7}};
+       
+       int prod[][] = new int[r1][c2];
+       
+       for(int i = 0 ; i < r1; i++){
+           for(int j = 0 ; j < c2; j++){
+               for(int k = 0; k <c1 ; k++)
+               prod[i][j] += arr1[i][j] * arr2[i][j];
+           }
+       }
+       
+       System.out.println("The product of two matrices is : ");
+       
+        for(int[] row : prod){
+            for(int column : row){
+                System.out.print(column + "  ");
+            }
+            System.out.println();
+        }
+    }
+}
+/*
+The product of two matrices is :
+28   48
+64  100
+*/
+
+Task 40> To TRANSOSE THE MATRIX
+class Transpose_Matrix{
+    public static void main(String[] args){
+       //Transpose of amatrix...
+       int rows = 3, columns = 3;
+       int[][] matrix = { {2,3,4}, {4,5,6}, {7,8,9} };
+       
+       display(matrix);//calling the display() method..
+       
+       //to transpose the matrix...
+       int[][] transpose = new int[columns][rows]; // store in reverse columns than rows columns in first and than rows..
+       
+       //outer loop for rows
+       //the i should be 0 <= i < rows
+       for(int i = 0 ; i< rows; i++){
+           //inner loop for columns
+	   //the j should be 0 <= j < columns
+           for(int j = 0 ; j < columns; j++){
+               transpose[j][i] = matrix[i][j];
+           }
+       }
+       
+       display(transpose);
+        
+    }
+    
+    static void display(int[][] matrix){
+        System.out.println("The matrix is :");
+	//here k to iterate on  the rows
+        for(int[] k : matrix){
+	    //here l to iterate on  the columns
+            for(int l: k){
+                System.out.print(l + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+Task 41> To print the number of charcters in the string..
+class Main{
+    public static void main (String[] args) {
+        //No of charcter in string / alternate no of sapces only we need to == instead of !=.
+        
+        String str = "This Website is aewsome.";
+        
+        int f = 0 ; //frequency - count the no of characters in the string..
+        
+        for(int i = 0 ; i <= str.length() - 1; i++){
+            if(str.charAt(i) != ' '){
+                f++;
+            }
+        }
+        System.out.println("The no of chracters in the string is: " + f);
+    }
+}
+
+
+Task 42> To COUNT the FREQUENCY of CHARCTER in String.
+class Count_Freq{
+    
+    public static void main (String[] args) {
+        //Find the frequency of a character in the string....
+       
+       String str =  "Hi my Name is Neha";
+       char ch = 'a'; //the charcter we want to search...
+       int f = 0; //counter variable...
+       
+       //to iterate over the array...
+        for(int i = 0 ; i <= str.length() - 1; i++){
+            //str.charAt(i) - is to fetch the charcter at particular index in string...
+            if( ch == str.charAt(i) ){
+                f++; //it it is found than f++
+            }     
+        }
+        
+        System.out.println("The frequency of the "+ ch + "is :" + f);
+    }
+}
+
+Task 43> COUNT the No of VOWELS, CONSONENTS, DIGITS , SPACES in the string....
+class Main{
+    
+    public static void main (String[] args) {
+       //the no of digits , spaces, vowels, consonents in the string are..
+       String str = "The website is 56824@ aewsome0.";
+       int v = 0, c = 0, d = 0, s = 0;
+       //converting into lower case... 
+       str = str.toLowerCase();
+       
+        for(int i = 0 ; i <= str.length()-1; i++){
+           
+            char ch = str.charAt(i); //storing the chracter into the ch to check.. the conditions..
+           
+            //conditions to check vowels..
+            if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+                ++v;
+            }
+           
+            //conditions to check consonents..
+            else if((ch >= 'a' && ch <= 'z')){
+                ++c;
+            }
+            
+            //to count digits..
+            else if(ch >= '0' && ch <= '9'){
+                ++d;
+            }
+            
+            //else if count spaces..
+            else if(ch == ' '){
+                ++s;
+            }
+           
+        }
+       System.out.println("Vowels :" + v);
+       System.out.println("Consonents :" + c);
+       System.out.println("Digits :" + d);
+       System.out.println("Spaces :" + s);
+    }
+}
+
+
+//I NEED TO REVISE THE LOGIC OF THE CODE...
+Task 44> To SORT the element in LEXIOGRAPHICAL ORDER...
+class Main{
+    public static void main (String[] args) {
+        //Enter the code here...
+        //sort accordingly the lexiographical order....
+        
+        //logic
+        //Array of words...
+        String[] words = {"Ruby", "C", "Python", "Java"};
+        
+        for(int i = 0 ; i < words.length; ++i){
+            for(int j = i+1 ; j < words.length + 1; ++j){
+                //here compareTo() is to compare two words...
+                if(words[i].compareTo(words[j]) > 0){
+                    String temp = words[i];
+                    words[i] = words[j];
+                    words[j] = temp;
+                }
+            }
+        }
+        
+        System.out.println("In the lexiographical order:");
+        for(int i = 0 ; i < 4; i++){
+            System.out.println(words[i]);
+        }
+    }
+}
+
+Task 45>To REPLACE the S and O with in the string...
+//LEARNT ABOUT - str.toCharArray() //to convert the string into character array...
+class Main{
+    public static void main (String[] args) {
+        //To replace the S and O with in the string...
+        String str =  "Java";
+        String str2 = " "; //empty string for updated value...
+        
+        str = str.toLowerCase();
+        
+        //To acces over it we have first converted into an array...
+        char[] arr = str.toCharArray(); //to convert the string into array...
+        
+        // System.out.println("Print the array :"+ arr);
+        
+        for(int i = 0 ; i <= arr.length-1; i++){
+            if(arr[i] == 'a'){
+                str2 = str2 + 'o';
+            }
+            else{
+                str2 = str2 + arr[i];
+            }
+        }
+        
+        System.out.println(str2);
+    }
+}
+
+//Using replaceAll() method only...
+class Main{
+    public static void main (String[] args) {
+        //To replace the S and O with in the string...
+        String str1 = "Java";
+        String str2 = str1.replaceAll("a", "o");
+        
+        System.out.println(str2);
+    }
+}
+
+Task 46> To find the character position in the String
+import java.util.Scanner;
+
+class Main{
+    public static void main (String[] args) {
+       //to find the position in String....
+       Scanner sc = new Scanner(System.in);
+       
+       System.out.println("Enter the String :");
+       
+       String str = sc.nextLine(); //it takes only a string
+       //next() - takes a string of character..
+       
+       for(int i = 0 ; i < str.length() ; i++){
+        //   char ch = str.charAt(i);
+           System.out.println("Character at "+ i + " Position :" + str.charAt(i));
+       }
+    }
+}
+
+
+//EXTRA RELATED TO ARRAY
+class Main{
+    public static void main (String[] args) {
+       //logic
+       int[] arr = {1, 2, 3, 4, 5, 6};
+       int sum  = 0;
+       
+       System.out.println("The sum of array is :");
+       
+       for(int i = 0 ; i <= arr.length - 1; i++){
+           //sum of elements on even index..
+           if(i % 2 == 0){
+               sum += arr[i];
+           }
+       }
+        System.out.println(sum);
+    }
+}
+
+class Main{
+    public static void main (String[] args) {
+       //logic
+       int[] arr = {1, 2, 3, 4, 5, 6};
+       int sum  = 0;
+       
+       System.out.println("The sum of array is :");
+       
+       for(int i = 0 ; i <= arr.length - 1; i++){
+           //sum of even elements in array.
+           if(arr[i] % 2 == 0){
+               sum += arr[i];
+           }
+       }
+        System.out.println(sum);
+    }
+}
+
+class Main{
+    public static void main (String[] args) {
+       int[] arr = {1, 2, 3, 4, 5, 6};
+       //sum of max and min element
+       
+       System.out.println(arr[0] + arr[arr.length - 1 ]);
+    }
+}
+
+Task 47> Sort the array using sort() , using Array 
+import java.util.Arrays;
+
+class Main{
+    public static void main (String[] args) {
+       int[] arr = {4,5,1,3,2,12,56,89};
+       
+       //using sort() sort the array...
+       Arrays.sort(arr);//we have to pass the array
+       
+       System.out.print("The sorted array in accesnding order: ");
+       
+       for(int i =0 ; i <= arr.length-1; i++){
+           System.out.print(arr[i] + " ");
+       }
+       
+       System.out.println();
+       
+       System.out.print("The sorted array in dscending order: ");
+       
+       for (int i = arr.length-1; i >= 0 ; i--){
+           System.out.print(arr[i] + " ");
+       } 
+    }
 }
