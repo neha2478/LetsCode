@@ -1,0 +1,176 @@
+//Collections in Java
+
+        Collection - 3 parts
+1> List     2> Queue  3>Set   4>Map 
+
+1> List - a> Array List , b>Vector , c> Stack , d> Linked List
+2> Queue - a> Linked List , b> Priority Queue
+3> Set - a> Hash set, b> Hash Tree, c> Linked Hash Set
+4> Map - a> HashMap , b> Linked Hash Map , c> Tree Map
+
+Stack it implements Vector
+Linked Hash set - It implements Hash set
+Linked Hash Map - It implemnts Hash Map
+
+1> List - Interface belongs to java.util.package
+        - stores upon index and duplicates 
+
+Features:-1> dynamic size
+          2> hetrogenus data 
+          3> indexd type collection
+          4> Duplicates alloewed
+          5> Orderd Collection / indexed collection / do random access 
+
+Array List :- Every thing same 
+              GROWS  its SIZE by 50% as compared to normal array
+              NON SICRONISED in Nature / fast performance
+
+
+//Methods for all the Lists....
+/*
+	        Methods we will use in List are
+	        
+	        void add(object obj)
+	        
+	        void add(index, object obj)
+	        
+	        void add(collections)
+	        
+	        void add(int index, collection)
+	        
+	        void addAll(int index, collection)
+	        
+	        void remove()
+	        
+	        void removeAll()
+	        
+	        void retainAll()
+	        
+	        void get(int index)
+	    */
+
+
+//Code related to ArrayList
+
+import java.util.ArrayList;
+1> using add
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	   //ArrayList
+	   
+	   ArrayList a1 = new ArrayList();
+	   
+	   a1.add(10);
+	   a1.add(20.56);
+	   a1.add('A');
+	   a1.add(11);
+	   a1.add("Shruti");
+	   a1.add(10);
+	   
+	   System.out.println("The array List is :" + a1);
+		
+	}
+}
+
+
+import java.util.ArrayList;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	   //ArrayList
+	   
+	   ArrayList a1 = new ArrayList();
+	   
+	   a1.add(10);
+	   a1.add(20.56);
+	   a1.add('A');
+	   a1.add(11);
+	   a1.add("Shruti");
+	   a1.add(10);
+	   
+	   
+	   ArrayList a2 = new ArrayList();
+	   
+	   a2.add(60);
+	   a2.add(20.00006);
+	   a2.add('B');
+	   a2.add(11);
+	   a2.add("Neha");
+	   a2.add(10000);
+	   
+	   
+	   System.out.println("a1 -> :" + a1);
+	   System.out.println("a2 -> :" + a2);
+	   
+	   a2.retainAll(a1); //which is a similar it will retain that one
+	   
+	   System.out.println("a1 -> :" + a1);
+	   System.out.println("a2 -> :" + a2); //a2 ->: [11]
+	   
+	   a1.remove(0); //to remove the the elemnet
+	   System.out.println(a1); //System.out.println("a1 -> :" + a2);
+	   
+	   a2.removeAll();
+	   System.out.println("a2 -> :" + a2);
+	   
+	   
+		
+	}
+}
+
+Vector:-
+
+It will grow its size by 100 %.
+➢ It is synchronized.
+➢ Since it is synchronized, the performance is slow.
+
+import java.util.ArrayList;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	   //ArrayList
+	   
+	   ArrayList a1 = new ArrayList();
+	   
+	   a1.add(10);
+	   a1.add(20.56);
+	   a1.add('A');
+	   a1.add(11);
+	   a1.add("Shruti");
+	   a1.add(10);
+	   
+	   
+	   ArrayList a2 = new ArrayList();
+	   
+	   a2.add(60);
+	   a2.add(20.00006);
+	   a2.add('B');
+	   a2.add(11);
+	   a2.add("Neha");
+	   a2.add(10000);
+	   
+	   
+	   System.out.println("a1 -> :" + a1);
+	   System.out.println("a2 -> :" + a2);
+	   
+	   a2.retainAll(a1); //which is a similar it will retain that one
+	   
+	   System.out.println("a1 -> :" + a1);
+	   System.out.println("a2 -> :" + a2); //a2 ->: [11]
+	   
+	   a1.remove(0); //to remove the the elemnet
+	   System.out.println(a1); //System.out.println("a1 -> :" + a2);
+	   
+	   a2.removeAll();
+	   System.out.println("a2 -> :" + a2);
+	   
+	   
+		
+	}
+}
