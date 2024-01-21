@@ -1,0 +1,139 @@
+Task 1> Welcome to Java!
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        /* Enter your code here. Print output to STDOUT. Your class should be named Solution. */
+        
+        System.out.println("Hello, World.");
+        System.out.println("Hello, Java.");
+    }
+}
+
+Task 2>  Java Stdin and Stdout I
+
+import java.util.Scanner;
+public class Solution {
+
+    public static void main(String[] args) {
+        //Here we took the user input using Scanner class
+//Logic of Code...
+        Scanner sc = new Scanner(System.in);
+        
+        //Taking integer input using nextInt()
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        sc.close(); //it will close the scan
+        //Printing the values...
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+    }
+}
+
+Task 3> Java If-Else
+//Logic of the code
+        if((N % 2 == 0 && (N>=6 && N <= 20)) || N % 2 != 0){
+            System.out.println("Weird");
+        }
+        //Here bit change in Logic...
+        else if(N % 2 == 0 && ((N >= 2 && N <= 5)||(N > 20 ))){
+            System.out.println("Not Weird");
+        }
+
+Task 4> Java Stdin and Stdout II
+//Logic of the code...
+Scanner scan = new Scanner(System.in);
+        
+        // Write your code here.
+        int i = scan.nextInt();
+        double d = scan.nextDouble();
+        scan.nextLine();
+        String s = scan.nextLine();  //nextLine() will return every character in a line of text
+        
+        scan.close();
+        
+        System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
+
+Task 5> Java Output Formatting
+Scanner sc = new Scanner(System.in);
+            System.out.println("================================");
+            for(int i=0;i<3;i++){
+                String s1 = sc.next();
+                int x = sc.nextInt();
+                
+                //Complete this line
+                System.out.printf("%-15s" , s1); // %-15 - Fifteen characters left-justified
+                System.out.printf("%03d" , x);   //%03d" - 3 leading zeros in an Integer
+                System.out.println();
+            }
+            System.out.println("================================");
+
+Task 6> Java Loop 1
+int a ; 
+        
+        for(int i = 1; i <= 10; i++){
+            a = N * i;
+            // System.out.println( N + " x " + i + " = " +a);
+            System.out.printf("%d x %d = %d", N , i , a);
+            System.out.println();
+
+Task 7> Java Loop 11
+  //Logic
+        Scanner mn = new Scanner(System.in);
+        int t = mn.nextInt();
+        
+        for(int i=0;i<t;i++){
+            int a = mn.nextInt();
+            int b = mn.nextInt();
+            int n = mn.nextInt();
+            for(int j=0;j<n;j++){
+                a+=b;
+                if(j>0)
+                System.out.print(" ");
+                System.out.print(a);
+                    
+                b=b*2;
+                
+            }
+            System.out.println();
+        }
+        mn.close(); //the class_object_name.close();
+
+
+ Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        
+        //Up to 0 to that t value it will take...
+        for(int i = 0 ; i < t ; i++){
+            try{
+                long val = sc.nextLong(); //it will take a value...
+                System.out.println( val + "can be fitted in:");
+                //byte range
+                if( val >= -128 && val <= 127){
+                    System.out.println(" * byte");
+                }
+                
+                //short range
+                if( val >= -32768 && val <= 32767){
+                    System.out.println(" * sort");
+                }
+                
+                //int range
+                if( val >= -Math.pow(1, 31) && val <= Math.pow(2, 31)-1){
+                    System.out.println(" * int");
+                }
+                
+                //long range
+                if( val >= -Math.pow(2, 63) && val <= (Math.pow(2, 63)-1)){
+                    System.out.println(" * long");
+                }
+            }
+            
+            catch(Exception e){
+                System.out.println(sc.next() + "can't be fitted anywhere");
+            }
