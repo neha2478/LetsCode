@@ -47,7 +47,17 @@
 44> To SORT the element in LEXIOGRAPHICAL ORDER... **** have to read this****
 45>To REPLACE the S and O with in the string...
 46> To Find the Character position in the String
-
+47> Sort the array using sort() , using Array 
+48> String Related - a>  To convert a String to String Array - USING - split() method...
+		      b> To seacrh the sub string is present or not... (Find string in the String array)
+49> PERFECT NUMBER
+50> PERFECT SQUARE
+51> Find Missing Number...
+52> To FIND RANDOM NUMBERS - We need Random();
+53> BUBBLE SORT
+54> STRONG NUMBER
+55> HAPPY NUMBER
+56> find the binary digit in the number...
 
 
 Task 1>
@@ -1345,6 +1355,36 @@ class Count_Freq{
     }
 }
 
+//Another way using toCharArray() and next().charAt(0)....
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    //To take a string input
+	    System.out.print(" Enter a String : ");
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine() ; // to take a String input...
+		
+		System.out.print("Input the chracter u want to search: ");
+		char find_alpha = sc.next().charAt(0); // to fetch a charcter
+		
+		
+		int c = 0; //count the frequency...
+		
+		//Covert the string into a charachter array...
+		char[] arr = str.toCharArray();
+		
+		for(int i = 0 ; i <= arr.length - 1; i++){
+		    if(arr[i] == find_alpha){
+		        c++;
+		    }
+		}
+		System.out.println( "The count of the character is :"  + c);
+		
+	}
+}
+
 Task 43> COUNT the No of VOWELS, CONSONENTS, DIGITS , SPACES in the string....
 class Main{
     
@@ -1547,4 +1587,416 @@ class Main{
            System.out.print(arr[i] + " ");
        } 
     }
+}
+
+Task 48> a>  To convert a String to String Array - USING - split() method...
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	   //To convert into the String to String Array...
+	   
+	   //Logic of the code..
+	   
+	   Scanner sc = new Scanner(System.in);
+	   System.out.print("Fetch a String from user:");
+	   String str = sc.nextLine(); //to fetch a string from user
+	   
+	   //covert the string to string Array
+	   String[] arr = str.split(" "); //in the split wecan give acc to our choise ..
+	   
+	   //printing the string array...
+	   System.out.print("The Array of string is :");
+	    
+	   System.out.print(" [ ");
+	   for (int i = 0; i <= arr.length - 1; i++){
+	       System.out.print(arr[i] + " , ");
+	   } 
+	    System.out.print(" ] ");
+	}
+}
+
+b> To seacrh the sub string is present or not...
+public class Main
+{
+	public static void main(String[] args) {
+	   //To convert into the String to String Array...
+	   
+	   //Logic of the code..
+	   
+	   Scanner sc = new Scanner(System.in);
+	   System.out.print("Fetch a String from user:");
+	   String str = sc.nextLine(); //to fetch a string from user
+	    System.out.print("The String we are searching in array : ");
+	   //The substring we want to find...in the array...
+	   String target = sc.nextLine();
+	   int index = -1;
+	   
+	   //covert the string to string Array
+	   String[] arr = str.split(" "); //in the split we can give acc to our choise ..
+	  
+	    for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals(target)) {
+                index = i;
+                System.out.println("Found");
+                break; // Exit the loop if the string is found
+            } 
+        }
+        
+        if(index != -1){
+            System.out.println("String found at index " + index);
+        }
+        else{
+            System.out.println("String not found in the array.");
+        }
+        
+        sc.close(); //to close the scan...
+	}
+}
+
+/* O/P:-
+Fetch a String from user: Hi I am there
+The String we are searching in array : Hi
+Found
+String found at index 0
+*/
+
+Task 49> Perfect Number
+
+//What is perfect Number..
+Input: n = 15
+Output: false
+Divisors of 15 are 1, 3 and 5. Sum of 
+divisors is 9 which is not equal to 15.
+
+Input: n = 6
+Output: true
+Divisors of 6 are 1, 2 and 3. Sum of 
+divisors is 6.
+
+//Code
+import java.util.Scanner;
+
+public class PerfectNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user to enter a number
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        // Check if the number is perfect
+//logic
+        if (isPerfectNumber(number)) {
+            System.out.println(number + " is a perfect number.");
+        } else {
+            System.out.println(number + " is not a perfect number.");
+        }
+
+        scanner.close();
+    }
+
+    // Function to check if a number is a perfect number
+    private static boolean isPerfectNumber(int num) {
+	//Logic
+        if (num <= 0) {
+            return false; // Perfect numbers are positive integers
+        }
+
+        int sum = 0;
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+
+        return sum == num; // Check if the sum of divisors equals the original number
+    }
+}
+
+Task 50> Perfect Square
+import java.util.*;
+
+public class Main {
+    //Find Perfect Square
+    
+    static boolean checkPerfectSquare(double x){
+        //Logic
+        double sq= Math.sqrt(x); //first find squareroot of no and store it in a variable...
+        
+        return((sq - Math.floor(sq)) == 0); //check the squareroot - floor value of that squareroot == 0 , the value will be return in true or False..
+    }
+    
+    public static void main(String[] args){
+        //main method...
+        double num;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        num = sc.nextDouble();
+        if(checkPerfectSquare(num)) {
+            System.out.println(num+" is a perfect square number");
+        }
+        else{
+            System.out.println(num+" is not a perfect square number");
+	}
+    }
+}
+
+//Logic - Perfect Square
+//main method...
+        double num = 15;
+        
+        double sq = Math.sqrt(num);
+        
+        double val = Math.floor(sq);
+        
+        if((sq - val) == 0){
+           System.out.println("Perfect Square");
+        }
+        else{
+            System.out.println("Not a perfect Square!!");
+        }
+
+
+Task 51> Find Missing Number...
+public class MissingNumberFinder {
+    public static void main(String[] args) {
+//Logic of Code.. is..
+        // Example array with one missing number
+        int[] array = {1, 2, 4, 6, 3, 7, 8};
+
+        // Calculate the expected sum using the formula for the sum of first n natural numbers
+        int n = array.length + 1;
+        int expectedSum = (n * (n + 1)) / 2;
+
+        // Calculate the actual sum of the array
+        int actualSum = 0;
+        for (int num : array) {
+            actualSum += num;
+        }
+
+        // The missing number is the difference between the expected sum and the actual sum
+        int missingNumber = expectedSum - actualSum;
+
+        System.out.println("The missing number is: " + missingNumber);
+    }
+}
+
+Task 52> To finf random Number - We need Random();
+import java.util.*;
+class Main
+{
+    public static void main(String[] args) 
+    {
+        Random rm = new Random();
+        System.out.println("Random numbers are : ");
+        System.out.println("*******************");
+        for(int i=1;i<=5;i++)
+        {
+            System.out.println(rm.nextInt(10));
+        }
+    }
+}
+
+Task 53> BUBBLE SORT
+//Algorithum
+Start
+Initiate two values n as size of array  n = arr.length -1,
+also i and j to traverse array.
+Put i=0 and j=1. 0 < i < n , 1 < j < n - i
+if  ar[j] > arr[j + 1]
+then take a temporay variable .. int temp = 0
+//do swaping
+temp = arr[j]
+arr[j] = arr[j+1]
+arr[j+1] = temp
+goto Step 2
+
+//print the sorted array - we can print the both arrays before sort and after sort...
+for(int i : arr){
+	S.o.p(arr[i] + '')
+}
+
+
+import java.util.*;
+
+class Main
+{
+    public static void main(String[] args) 
+    {
+       //Bubble sot;
+       //Logic
+       
+       int[] arr =  { 8 , 7 , 5 , 9 , 2 , 10 };
+       int n = arr.length - 1; //length of array
+       
+       
+       // Displaying the original array
+        System.out.println("Original array:");
+        printArray(arr);
+        
+        //Sort the array
+       
+       //i  range 0 - n (starts from 0)
+       for(int i = 0 ; i < n; i++){
+           //j range 1 - n-1 (starts from 1  index)
+           for(int j = 1 ; j < n - i ; j++){
+               if(arr[j] > arr[j + 1]){
+                   int temp = arr[j];
+                   arr[j] = arr[j+1];
+                   arr[j+1] = temp;  
+                   
+               }
+           }
+       }
+       
+       //Print the sorted array..
+       //calling the method
+       System.out.println("\nSorted array using Bubble Sort:");
+       printArray(arr);
+       
+    }
+    
+    static void printArray(int arr[]){
+        System.out.print(" [ ");
+        for(int i = 0 ; i <= arr.length -1; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.print(" ] ");
+    }
+}
+
+Task 54> Strong Number...
+//Algorithum
+1) Initialize sum of factorials as 0. 
+2) For every digit d, do following
+   a) Add d! to sum of factorials.
+3) If sum factorials is same as given 
+   number, return true.
+4) Else return false
+
+class Main
+{
+    public static void main(String[] args) 
+    {
+        //Strong Number 
+        //Logic of code
+        //Logic - 153 => 1! + 5! + 3! = 153 (The Number = sum of factorial of each digit)
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter a number according to your choise :");
+        int num = sc.nextInt();
+        int copy = num;
+        int s = 0; //s - sum
+        
+        while(num != 0){
+            int rem = num % 10; //to fech the digits one by one...
+            
+            int r = rem; //storing the value in r
+            int fact = 1;
+            
+            //to find factorial of each digit...
+            for(int i = 0 ; i <= r ; i++){
+                fact = fact * i;
+            }
+            
+            s = s + rem; //adding the factorial...of each digit...
+            
+            num = num / 10;
+        }
+        
+        //check weather if sum is equal to orignal num or TypeNotPresentException
+        if(copy == s ){
+            System.out.println("The is a Strong Number!!");
+        }
+        else{
+             System.out.println("The is not a Strong Number!!");
+        }
+    }
+}
+
+Task 55> HAPPY NUMBER
+ //Strong Number
+       Scanner sc = new Scanner(System.in);
+       System.out.print("Enter a Number : ");
+       int num = sc.nextInt();
+       int sum = 0;
+       while( num != 0 ){
+           int rem = num % 10;
+           sum += ( rem * rem );
+           num = num / 10;
+       }
+       
+       System.out.println(sum);
+       
+       //Now storing the sum in another variable
+       int no = sum;
+       
+       //Checking...
+       if(no == 1 || no == 7){
+           System.out.println("The number" + num + "is a Happy Number");
+       }
+       else{
+           System.out.println("Not a Happy Number!!");
+       }
+
+
+
+Task 56> find the count of Binary digits in the number...
+
+class Main
+{
+    public static void main(String[]args) 
+    {
+       //check the binary digits are present in the number...
+       //logic the digit should be either 0 or 1 - binary digit...
+
+       int num = 123;
+       int count = 0;
+       
+       while(num != 0){
+           int rem = num % 10;
+           
+           if(rem == 0 || rem == 1){
+               count++; //count will be incremented by 1
+           }
+           
+           num = num /10;
+       }
+       System.out.println("The no of binary digits in " + num + " is :" + count);
+    } 
+}
+
+Task 57> Traversing the sring in the sentence...
+class Main
+{
+    public static void main(String[]args) 
+    {
+       //interchanging the string in the sentence
+//Logic of the code
+       String str = "Hello java how are you!";
+       String rev = " ";
+       String str1 = "hello";
+       String str2 = "you";
+       
+        String[] s1 = str.split(" "); //convert the string into string array
+        
+        //the orignal srentence
+        for(int i = 0 ; i <= s1.length -1 ; i++){
+           System.out.print(s1[i] + " ");
+        }
+        
+        System.out.println(); //for endline
+        
+        //first we did traversing...
+        String temp = s1[0];
+        s1[0] = s1[s1.length - 1];
+        s1[s1.length - 1] = temp;
+        
+        //print after traversing
+        for(int j = 0 ; j < s1.length ; j++){
+           
+           System.out.print(s1[j] +  " ");
+        }
+    } 
 }
