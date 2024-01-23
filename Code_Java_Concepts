@@ -1,0 +1,167 @@
+
+Codes's related to the Java Topics :-
+
+public class Student
+{
+	public static void main(String[] args) {
+		//Constructor...
+		int std_id;
+		int stu_num;
+		
+		//Constructor - it is by default there for a class if we invoke an object...
+		Student(int a, int b){
+		    std_id = a;
+		    std_num = b;
+		    return;
+		}
+		
+		public static void main (String[] args) {
+		    //main method...
+		    //creating an object with new method...
+		    Student s1 = new Student(123, 23); //passing the values...
+		    System.out.println(s1.std_id);
+		     System.out.println(s1.std_num);
+		     
+		    Student s2 = new Student(145, 24);
+		    System.out.println(s2.std_id);
+		     System.out.println(s2.std_num);
+		}
+		
+	}
+}
+
+//Using this keyword....
+class Test {
+    int a;
+    int b;
+ 
+    // Parameterized constructor
+    Test(int a, int b)
+    {
+        this.a = a;
+        this.b = b;
+    }
+ 
+    // void display()
+    // {
+    //     // Displaying value of variables a and b
+    //     System.out.println("a = " + a + "  b = " + b);
+    // }
+ 
+    public static void main(String[] args)
+    {
+        Test obj1 = new Test(10, 20);
+        System.out.println(obj1.a + " ");
+        System.out.println(obj1.b);
+    }
+}
+
+//Pass by value:-
+import java.util.Scanner;
+public class Main
+{
+    //pass by value
+    static void add(int a, int b)
+    {
+        System.out.printf("The sum of two number : %d + %d = %d" , a, b, a+b);
+    }
+    
+	public static void main(String[] args) {
+	    
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the first Number:");
+		int a = sc.nextInt();
+		System.out.print("Enter the second Number:");
+		int b = sc.nextInt();
+		
+		//calling the method... from static to static...on same method only method name..
+		add(a, b);
+	}
+}
+
+//Pass by Refernce
+import java.util.Scanner;
+public class Main
+{
+    //pass by refernce
+    void play(){
+        System.out.println("Lets play a game!!");
+    }
+    
+    void areaOfCir(int r){
+        double area = 3.14 * r * r;
+        System.out.println("Area of circle is : " + area);
+    }
+    
+	public static void main(String[] args) {
+	    
+	    //Object 
+		Main m1 = new Main();
+		
+		m1.play(); //calling the method using the refernce variable
+		m1.areaOfCir(5);
+	}
+}
+
+//Method overloading
+import java.util.Scanner;
+public class Main
+{
+    //method overiding
+    
+    void send(int no){
+      System.out.println("Sending number : " + no);  
+    }
+    
+    void send(String texting){
+        System.out.println("Sending text :"+ texting);
+    }
+    
+    void send(int no, String texting){
+        System.out.println("Sending number and text :"+ no +" , " + texting);
+    }
+    
+    void send(String texting, int no){
+        System.out.println("Sending text and number : " + texting + " , " + no);
+    }
+
+    
+	public static void main(String[] args) {
+	    
+	    //Object 
+		Main m1 = new Main();
+		
+		m1.send(123);
+		m1.send("Hi I am Mahesh");
+		m1.send(126, "Wru ?");
+		m1.send("How much time u will take!!" , 34 );
+	}
+}
+
+//Method overriding
+import java.util.Scanner;
+class A
+{
+    //method overriding
+    
+    void send(){
+      System.out.println("Sending Text!!");  
+    }
+    
+}
+
+class B extends A{
+    //Super ..
+    super();
+    void send(){
+        System.out.println("Sending text, image, vedio");
+    }
+}
+
+class Main{
+    public static void main (String[] args) {
+        //Here we will create an object of base class coz it have updated task
+        B b1 = new B();
+        b1.send();
+    }
+}
