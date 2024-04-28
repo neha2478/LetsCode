@@ -9,12 +9,47 @@ a type of computer program called a command-line interpreter
 An assembly language is a type of low-level programming language that is intended to communicate directly with a computer's hardware. 
 
 > ls - The most frequently used command in Linux to list directories
-> pwd - Print working directory commands in linux
 > cd - Command used to navigate through directories
 > mkdir - Command used to create directories in linux
 > mv - Move or rename files in linux.
 > ls -ll  - to  show the List in the folder
 > cp - Similar usage as mv but for copying files in Linux
+
+
+
+//From theLinux vedios :-
+> ls  - Will give the contentof directory.
+> ls ~ - this '~' symbol means the root directory. [It will give us the same content.]
 >  ls [optional] [file / directory]  -  'ls' will display of the current directory. By default, 'ls' lists files and directories in alphabetical order.
-                                        Commonly Used Options in 'ls' command in Linux.
+                                        Commonly Used Options in 'ls' command in Linux. 
 > ls -t   -   It sorts the file by modification time, showing the last ed.
+
+> ls folder_name/  -  To see the files inside that folder (To List all the contents in that particular folder)
+
+> ls /   -   It will display the contents of the root folder  , the forward slash is for our root directory
+> pwd  - It will provide the root directory.  ,
+      >pwd [options] - 
+                    pwd -L - The default behavior of the shell built-in “pwd” is equivalent to using “pwd -L”.
+                    pwd -P - The default behavior of the binary “/bin/pwd” is the same as using “pwd -P”.
+
+
+> clear  +  enter   -    To clear the terminal. 
+                        (Terminal will be blank but when we will scrool up we will get that onld cmds that we have enter)
+
+> ls root_name/folder    -    which have the root folder from root_name
+                eg :-    ls /home/kali/ 
+> ls ../..    -   It will give the root directories files and structure.  (../ - is to go one step back, /.. - It is to go another step back) 
+> ls -l     -      It will give content in long format (Will give rights for this file and the size o this file.   , first one is to give writes to the program) 
+              This willgive the long list of files and directories.
+
+>  ls -a      -      It will give all the hidden files in linux ..
+>  ls -al       -       It will give all the hidden files and long list of files.
+
+>  touch       -      The easiest and most memorable way to create new, empty files is by using the touch command.
+>   touch /home/kali/Documents/pythonfile.py       -       To create one command
+>    ls   /home/kali/Documents              -       It will show how many files are there in that Documents folder
+>  vim filename   - to edit the file, and update it
+>   i       -       To insert something after vim
+> esc   -     to escape after inserting the command,
+> :wq   -     To come out of that.
+\
