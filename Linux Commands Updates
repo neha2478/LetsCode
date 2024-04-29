@@ -52,4 +52,35 @@ An assembly language is a type of low-level programming language that is intende
 >   i       -       To insert something after vim
 > esc   -     to escape after inserting the command,
 > :wq   -     To come out of that.
+
+
+
+
+Read - 4 , write - 2 , execute - 1
+chomd  - change mode for file  , giving rights to the file
+
+777 - (4+2+1) (4+2+1) (4+2+1)  - giving all rights to the file - how to check  -
+chmod 777 filename.fileextension 
+ls - to see wheather permission changed or not - shows green
+Link  : - https://kb.iu.edu/d/abdb
+
+> whoami   -    Check the current OS name
+
+Sudo su - to going to root user
+$ - it is used for normal user
+# - It is used for root user
+here for dollar we need to user the sudo keyword to give admin acces 
+
+sudo - is super user - to get root privilage
+
+from normal user side not from super user side
+> sudo apt update - to see the Package which are installed is updated or not , apt - package
+
+from the root # we don't need to use sudo
+> apt-get upgrade  -  to see the Package which are installed is updated or not , apt - package
+
+To install python foer Linux 
+> python
+> python -version     -    To check version of the python we have installed in Linux
+> apt-get install python   -  To inst
 \
