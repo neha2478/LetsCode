@@ -82,5 +82,16 @@ from the root # we don't need to use sudo
 To install python foer Linux 
 > python
 > python -version     -    To check version of the python we have installed in Linux
-> apt-get install python   -  To inst
+> apt-get install python   -  To install the python 
+
+> ls -LS > out.txt - 
+> -d */   -   To List out all the directory
+> cmd < file  - Input of cmd from file
+> cmd1 < (cmd2) 
+
+
+
+
+
+
 \
