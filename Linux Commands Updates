@@ -88,4 +88,5 @@ To install python foer Linux
 > -d */   -   To List out all the directory
 > cmd < file  - Input of cmd from file
 > cmd1 < (cmd2) 
+> history  -- To see the History of the commands that we have executed in our terminal  in Kali Linux...
 
