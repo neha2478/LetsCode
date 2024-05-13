@@ -1,1 +1,26 @@
+Here we will keep a note for Python ....
+
+"""  print() function how 
+# print(" Shruti ")
+# print(" Jagan ")
+
+# print(my_var:= "Hello World!")
+
+# my_var1 = "Yes"
+# print(my_var1)
+
+# print(my_var2 := "Hello Kundan and Nilesh!!")
+
+
+# def foo():
+
+# #empty function...
+
+
+a = 1
+print('Hello World!', a)
+#here we are passing a variable as a an argument ......
+
+b = 12
+print('Hello Shruti' , b)
 
