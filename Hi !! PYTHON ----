@@ -174,9 +174,17 @@ The Python interpreter has a number of functions and types built into it that ar
 
 2> aiter()      -          Return an asynchronous iterator for an asynchronous iterable.  
 
+3> all()         -        Return True if all elements of the iterable are true.
 
+4> any()        -        	Return True if any element of the iterable is true.
 
+5> ascii()        -        Return a string with a printable representation of an object.
 
+6> bin()        -        Convert an integer number to a binary string.
+
+7> bool()        -        	Return a Boolean value.
+
+8> breakpoint()        -        
 # An code example that we can practice is :
 
 #Function to calculate Speed
