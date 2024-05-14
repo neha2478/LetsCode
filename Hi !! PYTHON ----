@@ -26,6 +26,7 @@ print('Hello Shruti' , b)
 
 
 
+
 #For Loop :- To iterate on each elememt in Python
 
 The end keyword
@@ -93,6 +94,60 @@ In a composition, an indentation is a blank space between a margin and the begin
 indentation is about five spaces or one-quarter to one-half of an inch, depending on which style guide you follow.
 
 2> The Unexpected Indent Error is a common syntax error in Python that occurs when the interpreter encounters an indentation that it does not expect.
+
+
+
+# print(len(['cat', 3 , 'dog'])) # here we can pass the List in the len() any datatype of Function
+
+
+# a = ['Shruti', 'Neha', 'Jojo', 'Rehman']
+# b = input() 
+# if len(a) > 0:
+#     print("the list is not empty")
+
+# elif a[i] != b:
+#     print("Not Found")
+    
+# elif a[i] == b:
+#     print("It's there", a)
+
+# else :
+#     print("Come out!!")
+    
+    #Example :
+    
+# x = 200
+# if x > 15:
+#     print("x is greater than 15")
+# elif x > 10:
+#     print("x is greater than 10")
+# elif x > 5:
+#     print("x is greater than 5")
+
+
+#The functions ofdatatype:-
+"""
+These are the built in datatypes
+numeric  types - [ int() , float() , complex() , str() , boolean()]
+Collection types  - [list, tuple, dict , set]
+"""
+print(str(35)) # first it will convert the 35 in string than print() it  will print that .....
+
+print(bool(26))
+print(int('11'))
+print(float('3.14'))
+
+
+#### CONCATENATION OF STRINGS IN PYTHON
+a = 'Alice'
+c = a + ' Shruti'
+print(c)
+
+print('Alice' +  ' Shraddha')
+
+print('Alice ' * 8) #Alice Alice Alice Alice Alice Alice Alice Alice
+
+print('Alice ' ' Bob') #Alice Bob
 
 
 
