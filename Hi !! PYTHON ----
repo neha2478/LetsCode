@@ -172,4 +172,47 @@ The Python interpreter has a number of functions and types built into it that ar
         print('Absolute value of integer is:', "c = ", abs(c), "," ,"d = " , abs(d))  #Absolute value of integer is: c =  7.810249675906654 , d =  9.219544457292887
 
 
-2> aiter()      -          Return an asynchronous iterator for an asynchronous iterable.      
+2> aiter()      -          Return an asynchronous iterator for an asynchronous iterable.  
+
+
+
+
+# An code example that we can practice is :
+
+#Function to calculate Speed
+def cal_speed(dist, time):
+    print(" Distance(km) :", dist)
+    print(" Time(hr) :", time)
+    return dist/time
+    
+#Function to calculate distance traveled
+def cal_dis(speed, time):
+    print(" Time(hr) :" , time)
+    print("Speed(km/hr) :" , speed)
+    return speed * time
+    
+#Function to calculate the time taken
+def cal_time(dist , speed):
+    print(" Distance(km) :" , dist)
+    print(" Speed(km / hr) :" , speed)
+    return speed / dist
+ 
+#Driver code   
+#calling the functions
+
+a = cal_speed(abs(45.9), abs(-2)) # passing the abs values to the Actual parameter while calling the Function
+print("The calculated Speed(km / hr) :" , a)
+print("") # for to print space for next Line...
+
+b = cal_dis(abs(-62.9) , abs(2.5))
+print("The calculated Distance(km / hr) :" , b)
+print("")
+
+c = cal_time(abs(48.0) , abs(4.5))
+print("The calculated Time(hr) :" , c)
+
+
+
+
+
+
