@@ -66,6 +66,34 @@ It is also possible to use formatted strings to avoid using .format:
 print('What is your name?')
 my_name = input()
 print('Hi, {}' .format(my_name))
+#another way to do so is...
+print(f'Hi , {my_name}')
+
+
+
+The len() Function :- 
+Evaluates to the integer value of the number of characters in a string, list, dictionary, etc.:
+
+>>> len('hello')
+#5
+
+
+a = 'hello'
+print(len(a))
+
+print(len(['cat', 3 , 'dog'])) # here we can pass the List in the len() any datatype of Function
+
+
+#Errors that I'm Facing.....
+1> Causes of SyntaxError: invalid syntax, Missing a colon ( : ) at the end of a line or mixing up other symbols. 
+Missing a colon ( : ) at the end of a line or mixing up other symbols.
+
+What does an indent look like?
+In a composition, an indentation is a blank space between a margin and the beginning of a line of text. The beginning of this paragraph is indented. Standard paragraph
+indentation is about five spaces or one-quarter to one-half of an inch, depending on which style guide you follow.
+
+2> The Unexpected Indent Error is a common syntax error in Python that occurs when the interpreter encounters an indentation that it does not expect.
+
 
 
 
