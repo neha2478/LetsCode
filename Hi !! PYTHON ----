@@ -11,10 +11,10 @@ Here we will keep a note for Python ....
 
 # print(my_var2 := "Hello Kundan and Nilesh!!")
 
-
+"""  How to define the Function in Pytho  we use def keyword """
 # def foo():
 
-# #empty function...
+# The above is an empty function...
 
 
 a = 1
@@ -24,3 +24,49 @@ print('Hello World!', a)
 b = 12
 print('Hello Shruti' , b)
 
+
+
+#For Loop :- To iterate on each elememt in Python
+
+The end keyword
+The keyword argument end can be used to avoid the newline after the output, or end the output with a different string:
+
+phrase = ['printed' , 'with' , 'a', 'dash' , 'in', 'between']
+
+print("The words in the Phrase :")
+# here i is the index for the for Loop we took 
+
+for i in phrase:
+        print( i , end= ' , ')
+"""
+    sep - this keyword is to specify how to seperate the objects, if there is more than one:
+print('Shruti', 'Kundan' , 'Nilesh' , sep = ' , ')
+
+greeting = 'Hello'
+greeting += ' World! '
+
+print(greeting)
+
+number = 1
+number += 5
+print(number)
+
+my_list = ['item']
+my_list *= 3
+print(my_list)
+
+#input()   -   This function takes the input from the user and converts it into a string:
+
+`input() can also set a default message without using print():` print()
+>>> my_name = input('Where is your name? ')
+>>> print('Hi, {}'.format(my_name))
+
+It is also possible to use formatted strings to avoid using .format:
+
+print('What is your name?')
+my_name = input()
+print('Hi, {}' .format(my_name))
+
+
+
+                               
