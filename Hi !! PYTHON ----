@@ -1,3 +1,6 @@
+Notes Link:- https://www.pythoncheatsheet.org/cheatsheet/built-in-functions
+
+
 Here we will keep a note for Python ....
 
 """  print() function how 
@@ -150,6 +153,23 @@ print('Alice ' * 8) #Alice Alice Alice Alice Alice Alice Alice Alice
 print('Alice ' ' Bob') #Alice Bob
 
 
+Python Built-in Functions :-
+The Python interpreter has a number of functions and types built into it that are always available.
+1> abs()        -      	Return the absolute value of a number. 
+        
+        #integer Number
+        a = -45
+        print('Absolute value of integer is:' , abs(a)) #Absolute value of integer is: 45
+        
+        #floating Number
+        b = -54.56
+        print('Absolute value of integer is:' , abs(b)) #Absolute value of integer is: 54.56
+        
+        #A complex Number
+        c = (5 + 6j)
+        d = (7 - 6j)
+        print('Absolute value of integer is:', abs(c)) #Absolute value of integer is: 7.810249675906654
+        print('Absolute value of integer is:', "c = ", abs(c), "," ,"d = " , abs(d))  #Absolute value of integer is: c =  7.810249675906654 , d =  9.219544457292887
 
 
-                               
+2> aiter()      -          Return an asynchronous iterator for an asynchronous iterable.      
