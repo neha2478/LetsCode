@@ -5,7 +5,7 @@ Here we will keep a note for Python ....
 
 """  print() function how 
 # print(" Shruti ")
-# print(" Jagan ")
+# print(" Kundan ")
 
 # print(my_var:= "Hello World!")
 
@@ -220,7 +220,60 @@ c = cal_time(abs(48.0) , abs(4.5))
 print("The calculated Time(hr) :" , c)
 
 
+"""
+        Output :-
+""""
+""""
+Distance(km) : 45.9
+Time(hr) : 2
+The calculated Speed(km / hr) : 22.95
+
+ Time(hr) : 2.5
+Speed(km/hr) : 62.9
+The calculated Distance(km / hr) : 157.25
+
+ Distance(km) : 48.0
+ Speed(km / hr) : 4.5
+ The calculated Time(hr) : 0.09375
+""""
 
 
+MATCH KEYWORD IN PYTHON!!
+### Here we have used the Match -
+                Match case' restricts your search to only terms with the specified capitalisation
+
+# Learning Match , It is an alternate of Switch
+# `_` is used to define a default case:
+
+response_code = 800
+
+match response_code:
+    case 200 | 201 :
+        print("OK")
+    case 300 | 301 :
+        print("Redirect")
+    case 400 | 401 :
+        print("Bad Request")
+    case 500 | 501 :
+        print("Internal Server Error!!")
+    case _:
+        print("Invalid code")
 
 
+resp = 110.20
+match resp:
+    case int():
+        print('Code is a number!!')
+    
+    case str():
+        print('Code is a String!!')
+    
+    case _:
+        print('Code is Invalid Number!!',resp)
+
+# While Loop Statement :- 
+s = 0
+
+while spam < 5:
+    print('Hello, World.')
+    s = s + 1 # it will increment each by one.... 
