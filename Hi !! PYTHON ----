@@ -1,4 +1,25 @@
 Notes Link:- https://www.pythoncheatsheet.org/cheatsheet/built-in-functions
+                https://www.datacamp.com/tutorial/data-structures-python
+                https://www.pythoncheatsheet.org/cheatsheet/lists-and-tuples
+
+
+
+Abstract Data Type and Data Structures
+Primitive Data Structures
+Integers
+Float
+Strings
+Boolean
+
+
+Non-Primitive Data Structures
+Arrays
+Lists
+Tuples
+Dictionary
+Sets
+Files
+
 
 
 Here we will keep a note for Python ....
@@ -277,3 +298,13 @@ s = 0
 while spam < 5:
     print('Hello, World.')
     s = s + 1 # it will increment each by one.... 
+
+# Hello, world.
+# Hello, world.
+# Hello, world.
+# Hello, world.
+# Hello, world.
+
+Python Lists :- 
+
+['John' , 'Peter' , 'Debora ]
