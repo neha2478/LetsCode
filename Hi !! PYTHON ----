@@ -355,3 +355,13 @@ price = [100, 50, 80, 40]
 
 for item, amount in zip(furniture, price):
     print(f'The {item} costs ${amount}')
+
+
+
+
+# in operator is to check weather it is there or not .
+print('bed' in ['table', 'chair', 'rack' , 'self'])
+
+# Another way 
+print('rack' in furniture)
+print('rack' not in furniture)
