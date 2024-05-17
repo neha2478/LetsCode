@@ -305,6 +305,40 @@ while spam < 5:
 # Hello, world.
 # Hello, world.
 
-Python Lists :- 
 
-['John' , 'Peter' , 'Debora ]
+
+
+Python Lists :- 
+ #Python Lists
+furniture = ['table' , 'chair' , 'rack', 'self']
+
+#+ve INDEXING
+print(furniture[0])
+print(furniture[3])
+print(furniture[2])
+print(furniture[1])
+
+#-VE INDEXING
+print(furniture[-2])
+#using format in Python
+print(f'Thelength of {furniture[-1]} is bigger than the {furniture[-3]}')
+
+#Sublists with Slices
+print(furniture[1:3]) #[starting index: End index-1 or endindex : jump the no of index]
+print(furniture[0:4])
+print(furniture[0:-1])
+print(furniture[:2]) # by default it will fetch teh starting index
+
+
+#################_ CONCATINATION :-
+print([1, 2, 3, 4, 5] + ['A' , 'B', 'C']) #adding two strings
+print(['X' , 'Y', 'Z'] * 3) # Multipilication with 3 to get one result
+
+my_list = [1, 2, 3, 4, 5]
+my_list = my_list + ['A' , 'B', 'C']
+print(my_list)
+
+
+furniture = ['table' , 'chair' , 'rack' , 'shelf']
+for item in furniture:
+                print(item)
