@@ -342,3 +342,16 @@ print(my_list)
 furniture = ['table' , 'chair' , 'rack' , 'shelf']
 for item in furniture:
                 print(item)
+
+
+# furniture = ['table', 'chair' , 'rack', 'self']
+
+# for index, item in enumerate(furniture):
+#     print(f'index: {index} - item: {item}') # here we are doing format furniture = ['table' , 'chair' , 'rack', 'self']
+    
+    
+furniture = ['table', 'chair', 'rack' , 'self']
+price = [100, 50, 80, 40]
+
+for item, amount in zip(furniture, price):
+    print(f'The {item} costs ${amount}')
