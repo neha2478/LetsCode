@@ -365,3 +365,76 @@ print('bed' in ['table', 'chair', 'rack' , 'self'])
 # Another way 
 print('rack' in furniture)
 print('rack' not in furniture)
+
+
+#DICTONARY :-
+# we  can store data  in Dictonary in form of keys and values
+'''
+my_cat = {
+    'size' : 'fat', 
+    'color' : 'gray',
+    'disposition' : 'loud'
+}
+
+
+#calling the Set key, value using subscript operator []
+my_cat['age_years'] = 2
+print(my_cat)
+
+# another way :-Get value using subscript operator []
+# A postfix expression followed by an expression in [ ] (brackets) 
+print(my_cat['size'])
+print(my_cat['eye_color']) # the key don't exist in dictonary
+
+'''
+
+# using the bracses ( Subscript ) / Another way is using
+#values() - to fetch the values 
+#keys() - to fetch the keys
+
+pet = {'color': 'red', 'age': 42}
+
+#fetch the values one by one
+# for val in pet:
+#     print(pet[val])
+    
+#using values() - The values() method gets the values of the dictionary:
+# for val1 in pet.values():
+#     print(val1)
+    
+# The keys() method gets the keys of the dictionary:
+# for key in pet.keys():
+#     print(key)
+    
+for key in pet:
+    print(pet.keys())
+    
+
+#items()
+
+pet = {'color': 'red', 'age': 42}
+
+for i in pet.items():
+    print(i)
+
+# # ('color', 'red')
+# # ('age', 42)
+
+# for key, val in pet.items():
+#     print(f'Key: {key} Value: {value}') #using format 
+    
+    
+
+# #get() -  The get() method returns the value of an item with the given key. If the key doesn’t exist, it returns None:
+# wife = {'name': 'Rose', 'age': 33}
+
+# print(f'My wifes name is {wife.get("name")}')
+
+# print(f'She is {wife.get("age")} years old.')
+
+#Adding items with setdefault
+
+wife = {'name': 'Rose', 'age': 33}
+print(wife.setdefault('has_hair', True))
+print(wife)
+
