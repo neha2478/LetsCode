@@ -438,3 +438,22 @@ wife = {'name': 'Rose', 'age': 33}
 print(wife.setdefault('has_hair', True))
 print(wife)
 
+# >>Adding items with setdefault()
+
+# brother = {'name': 'Rose', 'age': 33}
+# if 'has_hair' not in brother:
+#     brother['has_hair'] = True
+    
+# brother.setdefault('has_hair', True)
+# print(wife)
+
+import pprint
+
+Dict1 = {'name': 'Rose', 'age': 33, 'has_hair': True, 'hair_color': 'brown', 'height': 1.6, 'eye_color': 'brown'}
+pprint.pprint(Dict1)
+
+# Merge two Dictonaries in python
+dicta = {'a': 1 , 'b' : 2}
+dictb = {'c': 3, 'd' : 4}
+# print(dicta + dictb) # here we can't concatinate the two Dictonaries
+dict_c = {**dicta , **dictb}
