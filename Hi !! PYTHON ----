@@ -457,3 +457,29 @@ dicta = {'a': 1 , 'b' : 2}
 dictb = {'c': 3, 'd' : 4}
 # print(dicta + dictb) # here we can't concatinate the two Dictonaries
 dict_c = {**dicta , **dictb}
+
+
+def mergeFun(dicta = {'a': 1 , 'b' : 2} , dictb = {'c': 3, 'd' : 4}):
+   
+    dictb = {**dicta , **dictb} # here ** is to fetch address
+    mergeFun(dicta, dictb)
+    print(dictb)
+    
+
+# dicta = {'a': 1 , 'b' : 2}
+# dictb = {'c': 3, 'd' : 4}
+
+#mergeFun(dicta, dictb) # calling the function and passing the actual arg
+
+"""
+
+# def sum(g , d):
+#     print(g + d)
+    
+# sum(10 , 20)
+
+
+a = 10
+b = 20
+a = a + b
+print(a)
