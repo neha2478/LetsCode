@@ -479,7 +479,41 @@ def mergeFun(dicta = {'a': 1 , 'b' : 2} , dictb = {'c': 3, 'd' : 4}):
 # sum(10 , 20)
 
 
-a = 10
-b = 20
-a = a + b
-print(a)
+# a = 10
+# b = 20
+# a = a + b
+# print(a)
+# b = a + b
+# print(b)
+
+# a = {1, 2, 3, 4, 5, 6}
+# a = set([1, 2, 3, 4, 5, 6])
+
+# # a = {}
+# print(type(a))
+# print(a)
+
+
+#Oops Concept 
+
+class A:
+    
+    def __init__(self):
+        
+        self.safevar = 10  #with self we can initialise the variables (instance variables)
+        #initise the protectec_var with 10
+        self.privatevar = 20
+        
+
+obj = A() #creating a constructor and storing it into a variable 
+#hence creating an object of Myclass class
+        
+print(obj.safevar)
+
+print(obj.privatevar)
+
+
+# In Python, encapsulation can be achieved by using access modifiers. 
+# Access modifiers are keywords that define the accessibility of attributes and methods in a class. The three access modifiers available in Python are public, private, and protected. 
+#  However, Python does not have an explicit way of defining access modifiers like some other programming languages such as Java and C++.
+
