@@ -494,7 +494,9 @@ def mergeFun(dicta = {'a': 1 , 'b' : 2} , dictb = {'c': 3, 'd' : 4}):
 # print(a)
 
 
-#Oops Concept 
+#Oops Concept :-
+
+#ABSTRACTION :-
 
 class A:
     
