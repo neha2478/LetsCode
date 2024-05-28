@@ -648,7 +648,11 @@ shapes = [Rectangle(4, 5) , Circle(7)]
 for s in shapes:
     print(s.area())
 
->  ###   LIST COMPERIHENSION  : -
+
+
+>>>>      PYTHON COMPREHENSIONS   <<<<<
+
+>>>>>>> LIST COMPERIHENSION  : -
 ---  This is how we create a new list from an existing collection with a For Loop:
 names = ['Charles' , 'Susan' , 'Patrik' , 'George'] #orignal List
 
@@ -665,7 +669,8 @@ print(new_list)
 
 #  Output : -  ['Charles', 'Susan', 'Patrick', 'George']
 
-> ### Another way to do above method...
+> ### Another ways to do above method...
+
 ----And this is how we do the same with a List Comprehension:
 a = ["apple" , "human" , "pigs" , "dogs" , "fish"]
 
@@ -675,4 +680,57 @@ print(new_a)
 
 #   Output  :- ['apple', 'human', 'pigs', 'dogs', 'fish']
 
+--- We can do the same with numbers:
+new_list2 = [(a, b) for a in range(1, 3) for b in range(1,3) ]
+print(new_list2)
+
+# Output :-[(1, 1), (1, 2), (2, 1), (2, 2)]
+
+
+
+>  Adding conditionals
+---- If we want new_list to have only the names that start with C, with a for loop, we would do it like this:
+
+names = ['Charles', 'Susan', 'Patrick', 'George', 'Carol']
+
+new_list = []
+for n in names:
+    if n.startswith('C'):
+        new_list.append(n)
+print(new_list)
+
+
+----  In a List Comprehension, we add the if statement at the end:
+
+names = ['Charles', 'Susan', 'Patrick', 'George', 'Carol']
+
+list2 = [n for n in names if n.startswith('C')]
+
+# here for n in names -  n in a - it will fetch the i in range of a , and  for i in a - This is the loop iterates over each element in names
+#here we have applied the if condition using '  if n.startswith() '
+# stratswith() - method to use filter out that particular string having features.
+
+print(list2) # print the list2 that we have created 
+
+
+>>>>>>  Set and Dict comprehensions
+>  To use an if-else statement in a List Comprehension:
+nums = [1,2, 3, 4, 5 ,6 ,7, 8, 9, 10]
+new_list = [n * 2 if n % 2 == 0 else n for n in nums]
+print(new_list)
+"""
+    logic - 
+        if n % 2 == 0 - than n*2
+        else  if n % 2 != 0 -than n for n in nums , it will fetch that index from the list using iteratior/index and print as it is in the new_list
+"""
+
+>>> Set comprehension
+b = {"abc", "def"}
+e = {s.upper() for s in b}
+print(e)
+
+>>> Dict comprehension
+c  = {'name' : 'Shruti' , 'age' : 23 }
+d = {v: k for k , v in c.items()}
+print(d)
 
