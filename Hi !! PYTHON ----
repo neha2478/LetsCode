@@ -647,3 +647,32 @@ shapes = [Rectangle(4, 5) , Circle(7)]
 
 for s in shapes:
     print(s.area())
+
+>  ###   LIST COMPERIHENSION  : -
+---  This is how we create a new list from an existing collection with a For Loop:
+names = ['Charles' , 'Susan' , 'Patrik' , 'George'] #orignal List
+
+#new List that we have created is an empty List
+new_list = []   #empty List
+
+#to send the values we have in orignal list into an new_list which is empty , we will use apend
+# i - is the iterator
+# names - is the orignal list  
+for i in names: 
+    new_list.append(i)
+
+print(new_list)
+
+#  Output : -  ['Charles', 'Susan', 'Patrick', 'George']
+
+> ### Another way to do above method...
+----And this is how we do the same with a List Comprehension:
+a = ["apple" , "human" , "pigs" , "dogs" , "fish"]
+
+#an another new list we will create alternate of the above method
+new_a = [i for i in a] # i - iterator , i in a - it will fetch the i in range of a , and  for i in a - This is the loop iterates over each element in names
+print(new_a)
+
+#   Output  :- ['apple', 'human', 'pigs', 'dogs', 'fish']
+
+
