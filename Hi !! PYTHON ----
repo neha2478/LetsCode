@@ -519,3 +519,131 @@ print(obj.privatevar)
 # Access modifiers are keywords that define the accessibility of attributes and methods in a class. The three access modifiers available in Python are public, private, and protected. 
 #  However, Python does not have an explicit way of defining access modifiers like some other programming languages such as Java and C++.
 
+#######  INHERITANCE :-
+# Inheritance :-
+class Animal:
+    
+    # Constructor method that initializes the class object with a name attribute
+    def __init__(self , name):
+        self.name = name
+        
+        
+    def speak(self):
+        print("")
+        
+        
+class Dog(Animal):
+    
+    def speak(self):
+        print("Woof!")
+        
+
+class Cat(Animal):
+    
+    def speak(self):
+        print("Meow!")
+        
+
+#creating object of Dog class and passing a String as an argument
+dog = Dog("Rover")
+
+#creating object of Dog class and passing a String as an argument
+cat = Cat("Whiskers")
+
+dog.speak() #the function is called by the dog obj
+
+cat.speak() #function speak() is called by obj cat
+
+
+
+######  POLYMORPHORISM :-
+#h - height , w - width , r - radius, 
+#Base class
+class Shape:
+    def areaofShape(self):
+        pass
+    
+#Sub class
+#here it is inheriting the properties of Base calss 
+class Rectangle(Shape):
+    #constructor - default constructor 
+    def __init__(self, w , h):
+        self.h = h #Initialize height instance variable
+        self.w = w #Initialize width instance variable
+    #overide the method area   
+    def area(self):
+        return (self.w * self.h)
+        
+
+class Circle(Shape):
+     #constructor - default constructor
+    def __init__(self, r):
+         self.r = r #Initialize radius instance variable
+         
+    #overide the method area
+    def area(self):
+        return(3.14 * radius * radius)
+        
+class Square(Shape):
+    #constructor - default constructor
+    def __init__(self , l , b):
+        self.s = s #Initialize length instance variable
+        
+    def area(self):
+        return (s ** 2)
+        
+
+class Triangle(Shape):
+    
+    #constructor - default constructor
+    def __init__(self , b , h):
+        self.b = b   #Initialize breadth instance variable
+        self.h = h  #Initialse height intance variable
+        
+    def area(self):
+        return(0.5 * b * h)
+        
+
+shapes = [Rectangle(4,5) , Circle(6) , Square(5) , Triangle(7, 9)]
+
+for i in shapes:
+    print(shape.area())
+
+
+
+#### ABSTRACTION :- Hiding the data and showing the essential Functionality
+
+#here in abract method or class we use @adstract method
+# Python does not have built-in support for abstract classes or interfaces, but they can be implemented using the abc (abstract base class) module. This module provides the ABC class and the abstractmethod decorator, which can be used to define abstract classes and methods.
+
+from abc import ABC , abstractmethod
+
+class Shape(ABC):
+    
+    @abstractmethod
+    def area(self):
+        pass
+    
+class Rectangle(Shape):
+    
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        
+    def area(self):
+        return self.width * self.height
+        
+class Circle(Shape):
+    
+    def __init__(self, radius):
+        self.radius = radius
+        
+        
+    def area(self):
+        return (3.14 * self.radius ** 2)
+        
+        
+shapes = [Rectangle(4, 5) , Circle(7)]
+
+for s in shapes:
+    print(s.area())
