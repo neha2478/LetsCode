@@ -734,3 +734,6 @@ c  = {'name' : 'Shruti' , 'age' : 23 }
 d = {v: k for k , v in c.items()}
 print(d)
 
+>>>  A List comprehension can be generated from a dictionary:-
+c = {'name' : 'Pooka' , 'age' : 5}
+new_c = ["{}:{}.format(k.upper() , v) "]
