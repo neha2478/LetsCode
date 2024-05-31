@@ -734,6 +734,115 @@ c  = {'name' : 'Shruti' , 'age' : 23 }
 d = {v: k for k , v in c.items()}
 print(d)
 
+
+c = {'name' : ''Pooka' , 'age' : 5}
+f = ["{}:{}".format(k.upper(), v in c.tems())]
+print(f)
+
 >>>  A List comprehension can be generated from a dictionary:-
 c = {'name' : 'Pooka' , 'age' : 5}
 new_c = ["{}:{}.format(k.upper() , v) "]
+
+
+##### >>>>>>  MANIPULATING  STRING
+
+------- Escape Characters :-
+-----  An escape character is created by typing a backslash \ followed by the character you want to insert.
+
+'''
+Escape Character                                        Print as
+`\'`                                                    Single quote
+`\"`                                                    Double quote
+`\t`                                                    Tab
+`\n`                                                    Newline (line break)
+`\\`                                                    Bashlash
+`\b`                                                    Backspace
+`\oooo`                                                 Octal value
+`\r`                                                    Carriage Return
+'''
+print("Hello there!\nHow are you?\nI\ 'm doing fine.")
+# Hello there!
+# How are you?
+# I'm doing fine.
+
+------------- Raw String :-
+A raw string entirely ignores all escape characters and prints any backslash that appers in the string
+
+>>> print(r"Hello there !\n How are you?\nI\'m doing fine.")
+# Hello there!\nHow are you?\nI\'m doing fine.
+
+----------- Multiline Strings :-
+
+print(
+   ... """Dear Alice,
+...
+... Eve's cat has been arrested for catnapping,
+... cat burglary, and extortion.
+...
+... Sincerely,
+... Bob"""
+...)
+
+Output :-
+# Dear Alice,
+
+# Eve's cat has been arrested for catnapping,
+# cat burglary, and extortion.
+
+# Sincerely,
+# Bob
+
+------------ Indexing :-
+spam = 'Hello World!'
+
+print(spam[0])
+
+print(spam[4])
+
+#negative indexing...
+
+print(spam[-1])
+
+print(spam[-4])
+
+
+------------  Slicing
+spam = "Hi Nannna"
+
+# string name
+print(spam[0:5]) 
+#[starting index : end index : no of jump] , the start index :- inclusive , last index :- exclusive 
+print(spam[:5])
+
+print(spam[7:])
+print(spam[6:-1])
+
+print(spam[::-1]) # is one way to reverse the string 
+
+#another way to print ....
+a = spam[0:9]
+b = spam[-1:-9]
+print(a)
+print(b)
+
+
+greet = 'Hello world!'
+print(greet.upper()) # converts each character of string into Upper case
+print(greet.lower()) # converts each character of string into Lower Case 
+print(greet.title()) #The title() method returns a string where the first character in every word is upper case
+print(greet.islower()) # will check weather all characters are in Lower or not.
+print(greet.isupper()) # all char of a string is upper / not
+
+
+#the in and not in operator....
+print('Hello' in 'Hello World')
+
+print('Hello' in 'Hello')
+
+print('HELLO' in 'Hello World!!!')
+
+print('cats' not in 'cats and dogs roamming in park')
+
+s = 'Shruti Karmakar'
+print(s.islower())
+print(s.isupper())
