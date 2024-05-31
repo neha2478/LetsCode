@@ -846,3 +846,17 @@ print('cats' not in 'cats and dogs roamming in park')
 s = 'Shruti Karmakar'
 print(s.islower())
 print(s.isupper())
+print(s.isalpha()) #returns True if the string consists only of letters.
+print(s.isalnum()) # returns True if the string consists only of letters and numbers.
+print(s.isdecimal()) #returns True if the string consists only of numbers.
+print(s.isspace()) #	returns True if the string consists only of spaces, tabs, and new-lines.
+print(s.istitle()) #	returns True if the string consists only of words that begin with an uppercase letter followed by only lowercase characters.
+
+print('Hello world!!'.startswith('Hello'))
+print('Hello World!'.endswith('worls!))
+
+
+# join() and split()
+
+join()
+The join() method takes all the items in an iterable, like a list, dictionary, tuple or set, and joins them into a string. You can also specify a separator.
