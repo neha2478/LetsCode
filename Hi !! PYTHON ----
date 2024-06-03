@@ -903,3 +903,30 @@ print('Hello'.rjust(20, '*').ljust(40, '$'))
 print('Shruti'.ljust(20, '-'))
 print('Shruti'.center(30, '='))
 
+
+# Removing whitespace with strip(), rstrip(), and lstrip()
+"""
+strip() - remove all extra white spaces 
+rstrip() - remove white spaces from right side
+lstrip() - remove white spaces from leftt side
+"""
+spam = '    Hello World     '
+print(spam.strip())
+print(spam.rstrip())
+print(spam.lstrip())
+
+spam2 = 'SpamSpamBaconSpamEggsSpamSpam'
+print(spam2.strip('pam'))
+
+
+# ------  The Count Method
+# Counts the number of occurrences of a given character or substring in the string it is applied to. Can be optionally provided start and end index.
+
+s = 'one sheep two sheep three sheep four'
+print(s.count('two')) #It will count the fequency of the word in sentence
+print(s.count('e' , 6)) 
+# output :- 6
+# returns count of e after 'one sh' i.e 6 chars since beginning of strin
+# output :- 6
+g
+print(s.count('e'))
