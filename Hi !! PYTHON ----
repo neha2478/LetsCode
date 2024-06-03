@@ -855,8 +855,36 @@ print(s.istitle()) #	returns True if the string consists only of words that begi
 print('Hello world!!'.startswith('Hello'))
 print('Hello World!'.endswith('worls!))
 
-
+"""
 # join() and split()
 
-join()
+---- join()
 The join() method takes all the items in an iterable, like a list, dictionary, tuple or set, and joins them into a string. You can also specify a separator.
+
+"""
+a = ['My' , 'name' , 'is' , 'Shruti']
+print(''.join(a)) # MynameisShruti
+print(' , '.join(a)) #
+
+print(''.join(['Hi', 'Simon' , 'I' , 'am' , 'Shruti!!']))
+print(' , '.join(['Hi', 'Simon' , 'I' , 'am' , 'Shruti!!']))
+
+print('ABC'.join(['Dear' , 'Jojo', 'Didi', 'loves' , 'u!!']))
+
+
+---- split()
+            The split() method splits a string into a list. By default, it will use whitespace to separate the items, but you can also set another character of choice:
+
+a = 'My name is Simon'
+print(a.split()) # ['My', 'name', 'is', 'Simon']
+
+print('MyABCnameABCisABCSimon'.split('ABC')) # ['My', 'name', 'is', 'Simon']
+
+print('My name is Simon'.split('m')) #splited by m
+# ['My', 'name', 'is', 'Simon']
+
+print('Hello'.rjust(10)) #it will justify the test
+print('Hello World'. ljust(20))
+print('Hello World'. rjust(20)) 
+print('Hello World'. center(20)) #    Hello World  
+
