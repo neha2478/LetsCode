@@ -888,3 +888,18 @@ print('Hello World'. ljust(20))
 print('Hello World'. rjust(20)) 
 print('Hello World'. center(20)) #    Hello World  
 
+# Justifying text with rjust(), ljust() and center() :-
+"""
+ rjust() - to justify right side with the no of spaces we will give in argument in rjust() method.
+ ljust() - to justify left side with no of spaces we will give in argument in rjust() method.
+ center() - it will justify at center
+"""
+print('Hello'.rjust(10)) #it will justify the test
+print('Hello World'. ljust(20))
+print('Hello World'. rjust(20)) 
+print('Hello World'. center(20)) #    Hello World   
+
+print('Hello'.rjust(20, '*').ljust(40, '$'))
+print('Shruti'.ljust(20, '-'))
+print('Shruti'.center(30, '='))
+
