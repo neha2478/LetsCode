@@ -930,3 +930,18 @@ print(s.count('e' , 6))
 # output :- 6
 g
 print(s.count('e'))
+
+
+>>> text = "Hello, world!"
+>>> text.replace("world", "planet")
+# 'Hello, planet!'
+
+>>> fruits = "apple, banana, cherry, apple"
+>>> fruits.replace("apple", "orange", 1)
+# 'orange, banana, cherry, apple'
+
+>>> sentence = "I like apples, Apples are my favorite fruit"
+>>> sentence.replace("apples", "oranges")
+# 'I like oranges, Apples are my favorite fruit'
+
+
